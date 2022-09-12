@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/PrimaryHeader.css'
+import '../styles/PrimaryHeader.css'
 import {Form, FormControl, Button} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSearch} from '@fortawesome/free-solid-svg-icons'
