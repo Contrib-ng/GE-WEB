@@ -47,6 +47,10 @@ ul li a {
     color: #0057C2;
 }
 
+ul li a:hover, ul li a:active {
+    color: #FB5012;
+}
+
 .PrimaryHeader_Links_Log_In {
     align-self: center;
     width: 100px;
@@ -59,6 +63,12 @@ ul li a {
     font-weight: 600;
 }
 
+.PrimaryHeader_Links_Log_In:hover{
+    border: 1px solid #FB5012;
+    color: white;
+    background-color: #FB5012;
+}
+
 .PrimaryHeader_Links_Sign_In {
     align-self: center;
     width: 100px;
@@ -69,4 +79,10 @@ ul li a {
     background-color: #FB5012;
     color: white;
     font-weight: 600;
+}
+
+.PrimaryHeader_Links_Sign_In:hover {
+    border: 1px solid #0057C2;
+    background-color: rgba(0, 87, 194, 10%);
+    color: #0057C2;
 }
