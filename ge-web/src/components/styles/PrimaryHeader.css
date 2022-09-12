@@ -1,33 +1,72 @@
 .PrimaryHeader_Body {
     height: 67px;
     display: flex;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
-/* .PrimaryHeader_Logo img {
-    width: 80px;
-    height: 67px;
-} */
+.PrimaryHeader_Logo img {
+    margin-right: 60px;
+}
 
-.PrimaryHeader_Search {
+.PrimaryHeader_Search, .PrimaryHeader_Links {
     align-self: center;
-    margin-left: 10px;
 }
 
 Form .PrimaryHeader_Search_Text {
     height: 25px;
     width: 350px;
-    border: 1px solid #110045;
+    border: 1px solid  #FB5012;
     border-radius: 20px;
     background-color: rgba(0, 87, 194, 10%);
     padding-left: 10px;
+    color: #FB5012;
 }
 
 Form .PrimaryHeader_Search_Logo{
-    height: 28px;
+    height: 29px;
     width: 60px;
-    border: 1px solid #110045;
+    border: 1px solid  #FB5012;
     border-radius: 20px;
-    background-color: #110045;
-    margin-left: -14%;
+    background-color: #FB5012;
+    margin-left: -5%;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0057C2;
+}
+
+.PrimaryHeader_Links_Log_In {
+    align-self: center;
+    width: 100px;
+    height: 30px;
+    margin-left: 60px;
+    border: 1px solid #0057C2;
+    border-radius: 20px;
+    background-color: rgba(0, 87, 194, 10%);
+    color: #0057C2;
+    font-weight: 600;
+}
+
+.PrimaryHeader_Links_Sign_In {
+    align-self: center;
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+    border: 1px solid #FB5012;
+    border-radius: 20px;
+    background-color: #FB5012;
+    color: white;
+    font-weight: 600;
 }
