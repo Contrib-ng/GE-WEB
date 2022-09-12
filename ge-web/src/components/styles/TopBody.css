@@ -1,0 +1,57 @@
+.TopBody_Body {
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+}
+
+.TopBody_Message {
+    width: 50%;
+    margin-left: 20px;
+    text-align: left;
+    color: #0057C2;
+}
+
+.TopBody_Message h1{
+    font-size: 55px;
+}
+
+.TopBody_Message p {
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.TopBody_Message Button {
+    margin-top: 40px;
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 12px;
+    color: white;
+    background-color: #FB5012;
+}
+
+.TopBody_Message .TopBody_Icon{
+    padding-left: 10px;
+}
+
+.TopBody_Message .TopBody_Trusted_By{
+    margin-top: 30px;
+}
+
+.TopBody_Message .TopBody_Trusted_By h1{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.TopBody_Message .TopBody_Trusted_By .Icon{
+    margin-right: 10px;
+}
+
+.TopBody_Image {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.TopBody_Image img {
+    width: 100%;
+}

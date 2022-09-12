@@ -3,7 +3,6 @@
     width: 100%;
     background-color: rgba(0, 87, 194, 10%);
     display: flex;
-
 }
 
 .SecondaryHeader_Body_Jobs{
@@ -12,19 +11,16 @@
 }
 
 .SecondaryHeader_Jobs{
-    font-size: 18px;
-    padding: 20px 10px;
-    color: #9A89B4;
+    font-size: 14px;
+    margin: 21px 5px;
+    color: #0057C2;
 }
 
 .SecondaryHeader_All_Categories{
     width: 150px;
     height: 25px;
-    padding: 20px 10px;
-    margin-left: 6%;
-    display: flex;
-    justify-content: flex-end;
- 
+    padding: 21px 5px;
+    margin-left: 16%; 
 }
 
 .SecondaryHeader_All_Categories Button{
