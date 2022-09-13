@@ -122,7 +122,7 @@ const Experts = () => {
             {
                 Skills.slice(0,more).map(skill => {
                     return (
-                        <div className="Box" >
+                        <div className="Box" key={skill.name} >
                             <div className="Name_Icon">
                             <img src={skill.icon} alt="" />
                             <h1>{skill.name}</h1>

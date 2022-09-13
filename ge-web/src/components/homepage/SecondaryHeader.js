@@ -35,7 +35,7 @@ const SecondaryHeader = () => {
         <div className='SecondaryHeader_Body_Jobs'>
         {
             Jobs.map(job => {
-                return <h2 className='SecondaryHeader_Jobs'>
+                return <h2 className='SecondaryHeader_Jobs' key={job.name}>
                     {job.name}
                 </h2>
             })
