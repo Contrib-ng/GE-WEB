@@ -54,7 +54,7 @@ const Skills = [
     {
         name: 'Accounting',
         icon: 'https://img.icons8.com/nolan/452/FFFFFF/estimates.png',
-        backgroundImage: 'https://photo-cdn2.icons8.com/cwV09dePn3DlX-L-NToxwFssoeCGurcmS5Qr7fs0Meg/rs:fit:1607:1072/czM6Ly9pY29uczgu/bW9vc2UtcHJvZC5l/eHRlcm5hbC9hMmE0/Mi82M2RmYjU4MTk0/ODE0ZTQ5YmVmNGRm/lgIxMTRiYzgzYy5q/cGc.jpg'
+        backgroundImage: 'https://img.freepik.com/free-photo/man-with-papers_1098-15660.jpg?w=996&t=st=1663165276~exp=1663165876~hmac=34bfe81675b111adfd7ab4d4637fee2ca3feb1e5f2aee53f894aef309bbb7759'
     },
 
 
@@ -108,7 +108,7 @@ const Skills = [
     {
         name: 'Accounting',
         icon: 'https://img.icons8.com/nolan/452/FFFFFF/estimates.png',
-        backgroundImage: 'https://photo-cdn2.icons8.com/cwV09dePn3DlX-L-NToxwFssoeCGurcmS5Qr7fs0Meg/rs:fit:1607:1072/czM6Ly9pY29uczgu/bW9vc2UtcHJvZC5l/eHRlcm5hbC9hMmE0/Mi82M2RmYjU4MTk0/ODE0ZTQ5YmVmNGRm/lgIxMTRiYzgzYy5q/cGc.jpg'
+        backgroundImage: 'https://img.freepik.com/free-photo/man-with-papers_1098-15660.jpg?w=996&t=st=1663165276~exp=1663165876~hmac=34bfe81675b111adfd7ab4d4637fee2ca3feb1e5f2aee53f894aef309bbb7759'
     }
 ]
 

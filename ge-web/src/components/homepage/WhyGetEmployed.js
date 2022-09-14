@@ -12,7 +12,7 @@ const CircleImages = [
     },
     {
         index: 3,
-        image: 'https://ouch-cdn2.icons8.com/UNMxPK_qSAUGJhJWW0yX-T3oa2NuNnx-0Za2WZezWp8/rs:fit:256:239/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvODYw/LzcyODc3YWYwLWI1/ODItNDhlZS05NjIz/LTQ5lghhY2JmZDMz/My5wbmc.png'
+        image: 'https://ouch-cdn2.icons8.com/erFshPNbJgwLaz6OFXZ1k_HVIECWocj8YTJymOVwRpk/rs:fit:256:205/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMzAv/YWNkNmUwYzItODI1/Ni00MmZkLTllNGMt/N2I5NjY4YWRjMjU1/LnBuZw.png'
     }
 ]
 
