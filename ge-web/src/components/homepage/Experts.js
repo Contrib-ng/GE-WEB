@@ -54,7 +54,7 @@ const Skills = [
     {
         name: 'Accounting',
         icon: 'https://img.icons8.com/nolan/452/FFFFFF/estimates.png',
-        backgroundImage: 'https://photo-cdn2.icons8.com/cwV09dePn3DlX-L-NToxwFssoeCGurcmS5Qr7fs0Meg/rs:fit:1607:1072/czM6Ly9pY29uczgu/bW9vc2UtcHJvZC5l/eHRlcm5hbC9hMmE0/Mi82M2RmYjU4MTk0/ODE0ZTQ5YmVmNGRm/MDIxMTRiYzgzYy5q/cGc.jpg'
+        backgroundImage: 'https://photo-cdn2.icons8.com/cwV09dePn3DlX-L-NToxwFssoeCGurcmS5Qr7fs0Meg/rs:fit:1607:1072/czM6Ly9pY29uczgu/bW9vc2UtcHJvZC5l/eHRlcm5hbC9hMmE0/Mi82M2RmYjU4MTk0/ODE0ZTQ5YmVmNGRm/lgIxMTRiYzgzYy5q/cGc.jpg'
     },
 
 
@@ -108,7 +108,7 @@ const Skills = [
     {
         name: 'Accounting',
         icon: 'https://img.icons8.com/nolan/452/FFFFFF/estimates.png',
-        backgroundImage: 'https://photo-cdn2.icons8.com/cwV09dePn3DlX-L-NToxwFssoeCGurcmS5Qr7fs0Meg/rs:fit:1607:1072/czM6Ly9pY29uczgu/bW9vc2UtcHJvZC5l/eHRlcm5hbC9hMmE0/Mi82M2RmYjU4MTk0/ODE0ZTQ5YmVmNGRm/MDIxMTRiYzgzYy5q/cGc.jpg'
+        backgroundImage: 'https://photo-cdn2.icons8.com/cwV09dePn3DlX-L-NToxwFssoeCGurcmS5Qr7fs0Meg/rs:fit:1607:1072/czM6Ly9pY29uczgu/bW9vc2UtcHJvZC5l/eHRlcm5hbC9hMmE0/Mi82M2RmYjU4MTk0/ODE0ZTQ5YmVmNGRm/lgIxMTRiYzgzYy5q/cGc.jpg'
     }
 ]
 
@@ -127,7 +127,7 @@ const Experts = () => {
                             <img src={skill.icon} alt="" />
                             <h1>{skill.name}</h1>
                             </div>
-                            <img src={skill.backgroundImage} alt="" srcset="" className='Image' />
+                            <img src={skill.backgroundImage} alt="" srcSet="" className='Image' />
                         </div>
                     )
                 })
@@ -137,14 +137,14 @@ const Experts = () => {
             more === 10 ? <div className="Button_Container">
             <Button type='button' onClick={() => setMore(more + 10)}>
                 SHOW MORE
-                <FontAwesomeIcon icon={faCaretDown} size='md' color='white' 
+                <FontAwesomeIcon icon={faCaretDown} size='lg' color='white' 
                 className='Button_Icon'/>
             </Button>
         </div> :
         <div className="Button_Container">
             <Button type='button' onClick={() => setMore(more - 10)}>
                 SHOW LESS
-                <FontAwesomeIcon icon={faCaretUp} size='md' color='white' 
+                <FontAwesomeIcon icon={faCaretUp} size='lg' color='white' 
                 className='Button_Icon'/>
             </Button>
         </div>

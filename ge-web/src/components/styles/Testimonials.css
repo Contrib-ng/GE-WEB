@@ -1,0 +1,55 @@
+.Testimonials_Body {
+    background-color: rgba(251, 80, 18, 0.09);
+    margin-top: 40px;
+}
+
+.Testimonials_Body h1 {
+    margin-left: 20px;
+    padding-top: 50px;
+    color: #0057C2;
+    font-size: 40px;
+}
+
+.Testimonials_Body .Testimonials_People {
+    margin-left: 20px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.Testimonials_Body .Testimonials_People .People {
+    width: 400px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 10px;
+    margin-bottom: 50px;
+}
+
+.Testimonials_Body .Testimonials_People .People .Profile_Icon_Name_Rating {
+    display: flex;
+}
+
+.Testimonials_Body .Testimonials_People .People .Profile_Icon_Name_Rating img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.Testimonials_Body .Testimonials_People .People .Profile_Icon_Name_Rating .Name_Rating {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.Testimonials_Body .Testimonials_People .People .Profile_Icon_Name_Rating .Name_Rating h4 {
+    color: #0057C2;
+    font-size: 20px;
+}
+
+.Testimonials_Body .Testimonials_People .People p {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #0057C2;
+}

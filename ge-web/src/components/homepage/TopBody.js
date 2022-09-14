@@ -13,7 +13,7 @@ const TopBody = () => {
             <p>GEC takes out the old ways of sourcing for jobs. </p>
             <Button type='submit'>
                 GET STARTED
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='md' color='white' className='TopBody_Icon'/>
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='lg' color='white' className='TopBody_Icon'/>
             </Button>
             <div className="TopBody_Trusted_By">
               <h1> Trusted By:</h1>
@@ -25,7 +25,7 @@ const TopBody = () => {
         </div>
         <div className="TopBody_Image">
             <img src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?w=996&t=st=1662999552~exp=1663000152~hmac=085781e85b4f65f7555913f8c61e24d2ea380e4c3d8ab1ea65ec33385a0a2e33" 
-            alt="Design_Image" srcset="" />
+            alt="Design_Image" srcSet="" />
         </div>
     </div>
   )

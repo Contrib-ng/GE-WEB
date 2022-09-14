@@ -14,7 +14,7 @@ const PrimaryHeader = () => {
       <Form inline="true" >
         <FormControl placeholder='Search skills, experts'  className='PrimaryHeader_Search_Text' type='text'/>
         <Button type='submit' variant='primary' className='PrimaryHeader_Search_Logo'>
-        <FontAwesomeIcon icon={faSearch} size='md' color='white'/>
+        <FontAwesomeIcon icon={faSearch} size='lg' color='white'/>
         </Button>
       </Form>
       </div>
