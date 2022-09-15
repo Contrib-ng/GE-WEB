@@ -1,11 +1,11 @@
 import React from 'react'
-import { bubble as Menu} from 'react-burger-menu'
+import { slide as Menu} from 'react-burger-menu'
 import './styles/Sidebar.css'
 import './styles/PrimaryHeader.css'
 
 export const HamburgerMenu = () => {
     return(
-        <Menu className='Menu'>
+        <Menu className='Menu' right width={250} noOverlay>
         <div className='PrimaryHeader_Logo'>
         <img src='images/3.png' alt='LOGO'/>
         </div>
