@@ -1,5 +1,6 @@
 import React from 'react'
 import Experts from '../components/homepage/Experts'
+import Footer from '../components/homepage/Footer'
 import LessOfficeWork from '../components/homepage/LessOfficeWork'
 import PrimaryHeader from '../components/homepage/PrimaryHeader'
 import SecondaryHeader from '../components/homepage/SecondaryHeader'
@@ -17,6 +18,7 @@ const Homepage = () => {
       <WhyGetEmployed />
       <Testimonials />  
       <LessOfficeWork />
+      <Footer />
     </div>
   )
 }

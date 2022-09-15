@@ -1,0 +1,105 @@
+.Footer_Body {
+    margin-top: 60px;
+    background-color: #0057C2;
+    overflow: hidden;
+}
+
+.Footer_Body .Footer_Circles_Top {
+    display: flex;
+    flex-direction: column;
+}
+
+.Footer_Circles_Top .Circle_One,
+.Footer_Circles_Top .Circle_Two{
+    width: 400px;
+    height: 400px;
+    background-color: rgba(251, 80, 18, 0.4) ;
+    border-radius: 200px;
+    display: flex;
+}
+
+.Footer_Circles_Top .Circle_One {
+    margin-top: -150px;
+    margin-left: -150px;
+}
+
+.Footer_Circles_Top .Circle_Two {
+    margin-top: -350px;
+    margin-left: -200px;
+}
+
+.Footer_Circles_Top .Circle_Two .Circle_Two_Hole {
+    width: 200px;
+    height: 200px;
+    background-color: #0057C2;
+    border-radius: 100px;
+    margin-left: 120px;
+    margin-top: 80px;
+}
+
+.Footer_Body .Footer_Links {
+    margin: -200px 0 300px 40px;
+    line-height: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.Footer_Body .Footer_Links div {
+    margin-right: 60px;
+}
+
+.Footer_Body .Footer_Links h1{
+    font-size: 20px;
+    color: white;
+}
+
+.Footer_Body .Footer_Links p{
+    font-size: 15px;
+    color: white;
+}
+
+.Footer_Body .Footer_Links svg {
+    width: 400px;
+    height: 400px;
+    margin-right: -10%;
+    margin-top: -20%;
+    background: none;
+}
+
+.Footer_Body .Footer_Circles_Bottom{
+    margin-left: 70%;
+}
+
+
+.Footer_Circles_Bottom .Circle_One,
+.Footer_Circles_Bottom .Circle_Two{
+    width: 600px;
+    height: 600px;
+    background-color: rgba(244, 247, 245, 0.4) ;
+    border-radius: 300px;
+}
+
+.Footer_Circles_Bottom .Circle_One {
+    margin-top: -360px;
+}
+
+.Footer_Circles_Bottom .Circle_Two {
+    margin-top: -500px;
+}
+
+.Footer_Body .Footer_Foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 40px;
+    margin-top: -26%;
+    color: white;
+}
+
+.Footer_Body .Footer_Foot img {
+    margin-top: -20px;
+}
+
+.Footer_Foot .Socials .Icon {
+    padding-right: 20px;
+}
