@@ -7,10 +7,11 @@ import SecondaryHeader from '../components/homepage/SecondaryHeader'
 import Testimonials from '../components/homepage/Testimonials'
 import TopBody from '../components/homepage/TopBody'
 import WhyGetEmployed from '../components/homepage/WhyGetEmployed'
+import './styles/Homepage.css'
 
 const Homepage = () => {
   return (
-    <div className='Homepage_Body'>
+    <div className='Homepage_Body' style={{ width: '100%', overflow: 'hidden'}}>
       <PrimaryHeader />
       <SecondaryHeader />
       <TopBody />

@@ -1,0 +1,63 @@
+/* Hamburger Menu */
+.Menu{
+    margin: 0;
+    padding: 5px;
+}
+/* Individual item */
+.bm-item {
+    display: inline-block;
+  
+    /* Our sidebar item styling */
+    text-decoration: none;
+    margin-bottom: 20px;
+    color: #0057C2;
+    transition: color 0.2s;
+  }
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: relative;
+    width: 36px;
+    height: 30px;
+    top: 20px;
+    left: 0;
+  }
+
+  /* Color/shape of burger icon bars */
+.bm-burger-bars {
+    background: #FB5012;
+  }
+
+  
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+
+  
+/* Color/shape of close button cross */
+.bm-cross {
+    background: #FB5012;
+  }
+
+  /* General sidebar styles */
+.bm-menu {
+    background: white;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+  }
+
+  /* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+    fill: white;
+  }
+
+  /* Wrapper for item list */
+.bm-item-list {
+    color: #b8b7ad;
+  }
+  
+  /* Styling of overlay */
+  .bm-overlay {
+    background: white;
+  }
