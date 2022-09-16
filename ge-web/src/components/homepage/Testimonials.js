@@ -81,7 +81,7 @@ GetRating.map(rate => {
                             return (
                                 ratingStar >= 1
                                 ?<FontAwesomeIcon icon={faStar} color='gold' key={ratingStar}/>
-                                : <FontAwesomeIcon icon={faStarHalf} color='gold' />
+                                : <FontAwesomeIcon icon={faStarHalf} color='gold' key={ratingStar}/>
                             )
                         })
                     }

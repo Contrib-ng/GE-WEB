@@ -3,11 +3,11 @@
     width: 100%;
     background-color: rgba(0, 87, 194, 10%);
     display: flex;
+    justify-content: space-between;
 }
 
 .SecondaryHeader_Body_Jobs{
     display: flex;
-    justify-content: flex-start;
 }
 
 .SecondaryHeader_Jobs{
@@ -17,17 +17,79 @@
 }
 
 .SecondaryHeader_All_Categories{
-    width: 150px;
     height: 25px;
-    padding: 21px 5px;
-    margin-left: 16%; 
+    padding: 21px 0;
+    margin-right: 30px;
 }
 
 .SecondaryHeader_All_Categories Button{
+    width: 100%;
+    max-width: 150px;
     border: 1px solid #0057C2;
     border-radius: 10px;
     padding: 5px 15px 5px 15px;
     font-size: 12px;
     color: #0057C2;
     background-color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+    .SecondaryHeader_Jobs{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .SecondaryHeader_Jobs{
+        font-size: 10px;
+        margin: 24px 5px;
+    }
+    .SecondaryHeader_All_Categories Button {
+        font-size: 10px;
+        padding: 3px 9px 3px 9px;
+    }
+    .SecondaryHeader_All_Categories{
+        margin-right: 10px;
+        padding: 18px 0;
+    }
+}
+@media only screen and (max-width: 426px) {
+    .SecondaryHeader_Jobs{
+        font-size: 9px;
+        margin: 24px 5px;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .SecondaryHeader_Jobs{
+        font-size: 7px;
+        margin: 18px 5px;
+    }
+    .SecondaryHeader_Body{
+        height: 42px;
+    }
+    .SecondaryHeader_All_Categories{
+        margin-right: 10px;
+        padding: 10px 0;
+    }
+    .SecondaryHeader_All_Categories Button {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .SecondaryHeader_Jobs{
+        font-size: 6px;
+        margin: 18px 5px;
+    }
+    .SecondaryHeader_Body{
+        height: 42px;
+    }
+    .SecondaryHeader_All_Categories{
+        margin-right: 10px;
+        padding: 10px 0;
+    }
+    .SecondaryHeader_All_Categories Button {
+        font-size: 8px;
+    }
 }
