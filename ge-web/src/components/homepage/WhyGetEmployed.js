@@ -60,7 +60,8 @@ const WhyGetEmployed = () => {
                     return (
                         <div className="Circle_Image" key={circleImage.index}>
                         <div className="Circle" ></div>
-                        <img src={circleImage.image} alt="" srcSet="" /></div>
+                        <img src={circleImage.image} alt="" srcSet="" />
+                        </div>
                     )
                 })
             }    

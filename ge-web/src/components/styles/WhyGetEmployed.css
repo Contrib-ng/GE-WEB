@@ -1,5 +1,6 @@
 .WhyGetEmployed_Body {
     margin-top: 40px;
+    width: 100%;
 }
 
 .WhyGetEmployed_Body h1 {
@@ -17,11 +18,11 @@
 
 .WhyGetEmployed_Body .Circle_Image_Container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .WhyGetEmployed_Body .Circle_Image_Container .Circle_Image{
-    margin: 40px;
+    margin: 40px 0;
 }
 
 .WhyGetEmployed_Body .Circle_Image_Container .Circle_Image .Circle{
@@ -45,7 +46,7 @@
 }
 
 .WhyGetEmployed_Body .Mission_Container .Mission{
-    width: 400px;
+    width: 350px;
     height: 150px;
     display: flex;
     flex-direction: column;
@@ -75,4 +76,51 @@
     color: #0057C2;
     margin-left: -1px;
     font-size: 18px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .WhyGetEmployed_Body .Mission_Container .Mission{
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .WhyGetEmployed_Body .Mission_Container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .WhyGetEmployed_Body h1 {
+        font-size: 25px;
+    }
+    .WhyGetEmployed_Body .Circle_Image_Container .Circle_Image:nth-child(2),
+    .WhyGetEmployed_Body .Circle_Image_Container .Circle_Image:nth-child(3){
+        display: none;
+    }
+    .WhyGetEmployed_Body .Mission_Container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .WhyGetEmployed_Body h1 {
+        font-size: 23px;
+    }
+    .WhyGetEmployed_Body p {
+        font-size: 12px;
+    }
+    .WhyGetEmployed_Body .Mission_Container .Mission .Image_Name h4{
+        font-size: 16px;
+    }
+    .WhyGetEmployed_Body .Mission_Container .Mission{
+        margin-bottom: 0;
+    }
+    .WhyGetEmployed_Body .Mission_Container .Mission p {
+        font-size: 12px;
+    }
+    .WhyGetEmployed_Body .Mission_Container .Mission{
+        width: 250px;
+    }
 }
