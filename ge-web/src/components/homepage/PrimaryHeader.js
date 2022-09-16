@@ -8,11 +8,11 @@ import { HamburgerMenu } from '../Sidebar'
 const PrimaryHeader = () => {
   return (
     <div className='PrimaryHeader_Body'>
-    <div className="Menu_Show">
-    <HamburgerMenu />
-    </div>
       <div className='PrimaryHeader_Logo Show_Mobile_Logo'>
       <img src='images/3.png' alt='LOGO'/>
+      </div>
+      <div className="Menu_Show">
+      <HamburgerMenu />
       </div>
       <div className="PrimaryHeader_Search">
       <Form inline="true" >

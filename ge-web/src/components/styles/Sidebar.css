@@ -1,12 +1,9 @@
 /* Hamburger Menu */
 .Menu{
     margin: 0;
-    padding: 5px;
 }
 /* Individual item */
 .bm-item {
-    display: inline-block;
-  
     /* Our sidebar item styling */
     text-decoration: none;
     margin-bottom: 20px;
@@ -15,11 +12,10 @@
   }
 /* Position and sizing of burger button */
 .bm-burger-button {
-    position: relative;
+    position: fixed;
     width: 36px;
     height: 30px;
     top: 20px;
-    left: 0;
   }
 
   /* Color/shape of burger icon bars */
@@ -42,9 +38,14 @@
 
   /* General sidebar styles */
 .bm-menu {
-    background: white;
-    padding: 2.5em 1.5em 0;
+    padding: 0 0 0 1em;
     font-size: 1.15em;
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 
   /* Morph shape necessary with bubble or elastic */
@@ -60,4 +61,12 @@
   /* Styling of overlay */
   .bm-overlay {
     background: white;
+  }
+
+  @media only screen and (max-width: 528px) {
+    .bm-burger-button {
+      width: 26px;
+      height: 20px;
+      top: 22px
+    }
   }
