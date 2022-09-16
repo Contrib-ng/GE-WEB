@@ -166,7 +166,7 @@ ul li a:hover, ul li a:active {
     }
 }
 
-@media only screen and (max-width: 730px)  {
+@media only screen and (max-width: 600px)  {
     Form .PrimaryHeader_Search_Text {
         width: 250px;
         margin-left: 50px;
