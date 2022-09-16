@@ -30,6 +30,10 @@
     background-color: #FB5012;
 }
 
+.TopBody_Message .Mobile{
+    display: none;
+}
+
 .TopBody_Message .TopBody_Icon{
     padding-left: 10px;
 }
@@ -54,4 +58,92 @@
 
 .TopBody_Image img {
     width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .TopBody_Body {
+        display: flex;
+        flex-direction: column;
+    }
+    .TopBody_Message {
+        width: 100%;
+        text-align: left;
+    }
+    .TopBody_Message .Desktop {
+        display: none;
+    }
+    .TopBody_Message .Mobile{
+        display: flex;
+    }
+    .TopBody_Message .Show_Mobile_Button {
+        display: flex;
+    }
+    .TopBody_Message Button {
+        margin: 10px;
+    }
+    .TopBody_Image {
+        width: 100%;
+    }
+    .TopBody_Message .TopBody_Trusted_By{
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .TopBody_Body {
+        margin-top: 20px;
+    }
+    .TopBody_Message h1 {
+        font-size: 45px;
+    }
+    .TopBody_Message p {
+        font-size: 10px;
+    }
+    .TopBody_Message Button {
+        font-size: 10px;
+    }
+    .TopBody_Message .TopBody_Trusted_By h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .TopBody_Message h1 {
+        font-size: 35px;
+    }
+    .TopBody_Message p {
+        font-size: 9px;
+    }
+    .TopBody_Message Button {
+        font-size: 7px;
+    }
+    .TopBody_Message .TopBody_Trusted_By h1{
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 321px) {
+    .TopBody_Body {
+        margin-top: 10px;
+    }
+    .TopBody_Message h1 {
+        font-size: 25px;
+    }
+    .TopBody_Message p {
+        margin-top: 10px;
+        font-size: 7px;
+    }
+    .TopBody_Message Button {
+        font-size: 5px;
+        padding: 10px;
+        margin-top: 0;
+    }
+    .TopBody_Message .TopBody_Trusted_By h1{
+        font-size: 16px;
+    }
+    .TopBody_Message .TopBody_Trusted_By .Icon {
+        font-size: 13px;
+    }
 }

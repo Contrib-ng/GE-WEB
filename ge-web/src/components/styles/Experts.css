@@ -1,7 +1,7 @@
 .Experts_Body {
     margin-top: 40px;
     width: 100%;
-    background-color: rgba(0, 87, 194, 10%);    
+    background-color: rgba(0, 87, 194, 10%);  
 }
 
 .Experts_Body h1 {
@@ -39,6 +39,7 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     display: grid;
     grid-template-rows: repeat(2, 1fr);
+    z-index: -99;
 } 
 
 .Experts_Body .Experts_Skill_Box .Box .Name_Icon {

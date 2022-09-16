@@ -1,9 +1,12 @@
 .PrimaryHeader_Body {
+    position: fixed;
     width: 100%;
     height: 67px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: white;
+    margin: 0 !important;
 }
 .PrimaryHeader_Body .Menu_Show {
     display: none;

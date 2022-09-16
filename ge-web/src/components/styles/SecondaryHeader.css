@@ -1,9 +1,11 @@
 .SecondaryHeader_Body{
+    margin-top: 70px;
     height: 62px;
     width: 100%;
     background-color: rgba(0, 87, 194, 10%);
     display: flex;
     justify-content: space-between;
+    z-index: -99;
 }
 
 .SecondaryHeader_Body_Jobs{

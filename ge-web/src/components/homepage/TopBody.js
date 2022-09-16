@@ -10,8 +10,14 @@ const TopBody = () => {
     <div className='TopBody_Body'>
         <div className="TopBody_Message">
             <h1> Looking for a <br/> part-time or contract based project?</h1>
+            <div className="Show_Mobile_Button">
             <p>GEC takes out the old ways of sourcing for jobs. </p>
-            <Button type='submit'>
+            <Button type='submit' className='Mobile'>
+                GET STARTED
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='lg' color='white' className='TopBody_Icon'/>
+            </Button>
+            </div>
+            <Button type='button' className='Desktop'>
                 GET STARTED
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='lg' color='white' className='TopBody_Icon'/>
             </Button>
@@ -24,7 +30,7 @@ const TopBody = () => {
             </div>
         </div>
         <div className="TopBody_Image">
-            <img src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?w=996&t=st=1662999552~exp=1663000152~hmac=085781e85b4f65f7555913f8c61e24d2ea380e4c3d8ab1ea65ec33385a0a2e33" 
+            <img src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?w=996&t=st=1663329876~exp=1663330476~hmac=6dd592efa07dd6da02c7296955c261dcf15e1918fd1eb8fda2a9d356d5675d66" 
             alt="Design_Image" srcSet="" />
         </div>
     </div>

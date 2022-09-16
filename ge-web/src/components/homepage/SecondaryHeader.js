@@ -34,7 +34,6 @@ const SecondaryHeader = () => {
     const [bodyWidth, setBodyWidth] = useState()
     useEffect(() => {
         setBodyWidth(ref.current.offsetWidth)
-        console.log('width', bodyWidth)
     }, [bodyWidth])
   return (
     <div className='SecondaryHeader_Body' ref={ref}>
