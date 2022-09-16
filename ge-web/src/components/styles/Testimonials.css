@@ -1,6 +1,7 @@
 .Testimonials_Body {
     background-color: rgba(251, 80, 18, 0.09);
     margin-top: 40px;
+    width: 100%;
 }
 
 .Testimonials_Body h1 {
@@ -18,7 +19,7 @@
 }
 
 .Testimonials_Body .Testimonials_People .People {
-    width: 400px;
+    width: 380px;
     height: 150px;
     display: flex;
     flex-direction: column;
@@ -52,4 +53,50 @@
     margin-top: 10px;
     font-size: 15px;
     color: #0057C2;
+}
+
+@media only screen and (max-width: 1024px) {
+.Testimonials_Body .Testimonials_People {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media only screen and (max-width: 769px) {
+    .Testimonials_Body .Testimonials_People .People {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .Testimonials_Body h1 {
+        font-size: 35px;
+    }
+    .Testimonials_Body .Testimonials_People{
+        display: flex;
+        flex-direction: column;
+    }
+    .Testimonials_Body .Testimonials_People .People {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .Testimonials_Body h1 {
+        font-size: 30px;
+    }
+    .Testimonials_Body .Testimonials_People .People {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .Testimonials_Body h1 {
+        font-size: 25px;
+    }
+    .Testimonials_Body .Testimonials_People .People {
+        width: 250px;
+    }
+    .Testimonials_Body .Testimonials_People .People .Profile_Icon_Name_Rating .Name_Rating h4 {
+        font-size: 16px;
+    }
 }
