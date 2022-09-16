@@ -5,8 +5,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: white;
     margin: 0 !important;
+    background: rgba( 255, 255, 255, 0.15 );
+    backdrop-filter: blur( 12.5px );
+    -webkit-backdrop-filter: blur( 12.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .PrimaryHeader_Body .Menu_Show {
     display: none;
