@@ -120,7 +120,7 @@ const Experts = () => {
         <p> Search for experts by categories</p>
         <div className="Experts_Skill_Box">
             {
-                Skills.slice(0,more).map(skill => {
+                Skills.slice(0, more).map(skill => {
                     return (
                         <div className="Box" key={skill.name} >
                             <div className="Name_Icon">
