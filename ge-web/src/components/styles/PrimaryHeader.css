@@ -15,14 +15,26 @@
 .Modal_Content{
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 }
-
-.Modal_Content Button{
-    margin: 15px;
-}
-
-
 .Modal_Expert{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #0057C2;
+    border-radius: 10px;
+    background-color: rgba(0, 87, 194, 10%);
+    color: #0057C2;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.Continue{
     align-self: center;
     width: 100%;
     height: 40px;
@@ -34,11 +46,35 @@
     font-size: 18px;
 }
 
-.Modal_Expert .Icon {
-    margin-right: 10px;
+.Disabled{
+    align-self: center;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #abcdf7;
+    border-radius: 20px;
+    background-color: rgba(0, 87, 194, 10%);
+    color: #abcdf7;
+    font-weight: 600;
+    font-size: 18px;
 }
 
-.Modal_Expert:hover {
+.Modal_Expert .Icon, 
+.Selected .Icon {
+    padding-bottom: 10px;
+}
+
+.Selected {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 20px 0;
+    margin-bottom: 20px;
     border: 1px solid #FB5012;
     color: white;
     background-color: #FB5012;
@@ -155,6 +191,10 @@ ul li a:hover, ul li a:active {
     ul li a {
         font-size: 16px;
     }
+    .Modal_Expert {
+        padding: 15px 0;
+        margin-bottom: 15px;
+    }
 }
 
 @media only screen and (max-width: 908px)  {
@@ -240,7 +280,9 @@ ul li a:hover, ul li a:active {
         font-size: 16px;
     }
     .Modal_Expert {
-        font-size: 16px;
+        font-size: 14px;
+        padding: 10px 0;
+        margin-bottom: 10px;
     }
 }
 

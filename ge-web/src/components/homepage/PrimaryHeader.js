@@ -8,6 +8,7 @@ import Modal from 'react-modal'
 
 const PrimaryHeader = () => {
   const [modalOpen, setModalOpen] = useState(false)
+  const [selectedSignUp, setSelectedSignUp] = useState('')
   const modalStyles = {
     content: {
       top: '50%',
@@ -26,6 +27,7 @@ const PrimaryHeader = () => {
   }
   function closeModal() {
     setModalOpen(false)
+    setSelectedSignUp('')
   }
   return (
     <div className='PrimaryHeader_Body'>
@@ -40,17 +42,36 @@ const PrimaryHeader = () => {
       <h1> Join Get Employed</h1>
       <p style={{ fontSize: '8px'}}> Start your journey of utilization of skills and opportunities </p>
       <div className="Modal_Content">
-      <Button className='Modal_Expert Client'>
-      <FontAwesomeIcon icon={faUser} className='Icon'/>
-        Be the client
-      </Button>
-      <Button className='Modal_Expert'>
-      <FontAwesomeIcon icon={faArrowsDownToPeople} className='Icon'/>
-        Be the expert
-      </Button>
-      <Button className='Modal_Expert Hybrid'>
-      <FontAwesomeIcon icon={faMercury} className='Icon'/>
-        Hybrid member
+      <div className={
+        selectedSignUp === 'Client'
+        ? 'Selected'
+        : 'Modal_Expert'
+      } onClick={() => setSelectedSignUp('Client')}>
+      <FontAwesomeIcon icon={faUser} className='Icon'/>     
+        Be the client, Hire for projects
+      </div>
+      <div className={
+        selectedSignUp === 'Expert'
+        ? 'Selected'
+        : 'Modal_Expert'
+      } onClick={() => setSelectedSignUp('Expert')}>
+      <FontAwesomeIcon icon={faArrowsDownToPeople} className='Icon'/>     
+        Be the expert, Find jobs
+      </div>
+      <div className={
+        selectedSignUp === 'Both'
+        ? 'Selected'
+        : 'Modal_Expert'
+      } onClick={() => setSelectedSignUp('Both')}>
+      <FontAwesomeIcon icon={faMercury} className='Icon'/>     
+        You can be both, Hire and work
+      </div>
+      <Button className={
+        selectedSignUp !== ''
+        ? 'Continue'
+        : 'Disabled'
+      }>
+        Continue
       </Button>
       </div>
     </Modal>
@@ -79,7 +100,7 @@ const PrimaryHeader = () => {
         <li>
           <a href="/"> Why us?</a>
         </li>
-        <li>
+        <li> 
           <a href="/"> About us</a>
         </li>
       </ul>
