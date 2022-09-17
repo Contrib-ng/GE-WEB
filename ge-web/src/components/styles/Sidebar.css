@@ -10,6 +10,16 @@
     color: #0057C2;
     transition: color 0.2s;
   }
+
+.bm-item-list {
+  padding: 0 0 0 1em;
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  background: rgba(251, 80, 18, 0.4);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
 /* Position and sizing of burger button */
 .bm-burger-button {
     position: fixed;
@@ -38,30 +48,15 @@
 
   /* General sidebar styles */
 .bm-menu {
-    padding: 0 0 0 1em;
+    /* padding: 0 0 0 1em; */
     font-size: 1.15em;
+    backdrop-filter: blur( 1px );
+    -webkit-backdrop-filter: blur( 1px );
     background: rgba(251, 80, 18, 0.4);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 6.5px );
-    -webkit-backdrop-filter: blur( 6.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     height: 100vh !important;
-  }
-
-  /* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-    fill: white;
-  }
-
-  /* Wrapper for item list */
-.bm-item-list {
-    color: #b8b7ad;
-  }
-  
-  /* Styling of overlay */
-  .bm-overlay {
-    background: white;
   }
 
   @media only screen and (max-width: 528px) {
