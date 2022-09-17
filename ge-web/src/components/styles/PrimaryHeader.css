@@ -18,13 +18,13 @@
 }
 
 .Modal_Content Button{
-    margin: 25px;
+    margin: 15px;
 }
 
 
 .Modal_Expert{
     align-self: center;
-    width: 100%;
+    width: 80%;
     height: 40px;
     border: 1px solid #0057C2;
     border-radius: 20px;
@@ -32,6 +32,10 @@
     color: #0057C2;
     font-weight: 600;
     font-size: 18px;
+}
+
+.Modal_Expert .Icon {
+    margin-right: 10px;
 }
 
 .Modal_Expert:hover {

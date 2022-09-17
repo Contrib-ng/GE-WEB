@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../styles/PrimaryHeader.css'
 import {Form, FormControl, Button} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faSearch, faUser} from '@fortawesome/free-solid-svg-icons'
+import {faSearch, faUser, faArrowsDownToPeople, faMercury} from '@fortawesome/free-solid-svg-icons'
 import { HamburgerMenu } from '../Sidebar'
 import Modal from 'react-modal'
 
@@ -41,13 +41,15 @@ const PrimaryHeader = () => {
       <p style={{ fontSize: '8px'}}> Start your journey of utilization of skills and opportunities </p>
       <div className="Modal_Content">
       <Button className='Modal_Expert Client'>
-      <FontAwesomeIcon icon={faUser} />
-        Be a client
+      <FontAwesomeIcon icon={faUser} className='Icon'/>
+        Be the client
       </Button>
       <Button className='Modal_Expert'>
+      <FontAwesomeIcon icon={faArrowsDownToPeople} className='Icon'/>
         Be the expert
       </Button>
       <Button className='Modal_Expert Hybrid'>
+      <FontAwesomeIcon icon={faMercury} className='Icon'/>
         Hybrid member
       </Button>
       </div>
