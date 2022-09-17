@@ -10,6 +10,19 @@ const PrimaryHeader = () => {
   const [modalOpen, setModalOpen] = useState(false)
   const [selectedSignUp, setSelectedSignUp] = useState('')
   const modalStyles = {
+    overlay: {
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: 'rgba( 255, 255, 255, 0 )',
+      boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )',
+      backdropFilter: 'blur( 20px )',
+      webkitBackdropFilter: 'blur( 20px )',
+      borderRadius: '10px',
+      border: '1px solid rgba( 255, 255, 255, 0.18 )',
+    },
     content: {
       top: '50%',
       left: '50%',
@@ -18,9 +31,15 @@ const PrimaryHeader = () => {
       marginRight: '-50px',
       transform: 'translate(-50%, -50%)',
       color: '#0057C2',
-      padding: '40px',
+      padding: '20px 15px',
+      backgroundColor: 'rgba( 255, 255, 255, 0 )',
+      boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )',
+      backdropFilter: 'blur( 20px )',
+      webkitBackdropFilter: 'blur( 20px )',
+      borderRadius: '10px',
+      border: '1px solid rgba( 255, 255, 255, 0.18 )',
     },
-  }
+}
   
   function openModal() {
     setModalOpen(true)
@@ -35,6 +54,7 @@ const PrimaryHeader = () => {
     isOpen={modalOpen}
     onRequestClose={closeModal}
     shouldCloseOnOverlayClick
+    overlayClassName={'overlay'}
     preventScroll
     style={modalStyles}
     ariaHideApp={false}
@@ -56,7 +76,7 @@ const PrimaryHeader = () => {
         : 'Modal_Expert'
       } onClick={() => setSelectedSignUp('Expert')}>
       <FontAwesomeIcon icon={faArrowsDownToPeople} className='Icon'/>     
-        Be the expert, Find jobs
+        Be the expert, Find your job
       </div>
       <div className={
         selectedSignUp === 'Both'
