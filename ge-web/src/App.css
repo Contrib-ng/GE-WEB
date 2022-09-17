@@ -1,3 +1,4 @@
 .App {
-    width: 100vw !important;
+    width: 99.7vw !important;
+    overflow: hidden;
 }

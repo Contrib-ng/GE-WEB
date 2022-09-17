@@ -48,6 +48,18 @@ const PrimaryHeader = () => {
     setModalOpen(false)
     setSelectedSignUp('')
   }
+  function ButtonText(){
+    if (selectedSignUp === 'Client'){
+      return "Join as a client"
+    } else if (selectedSignUp === 'Expert'){
+      return "Apply as an expert"
+    } else if (selectedSignUp === 'Both'){
+      return "Be both"
+    } else {
+      return 'Continue'
+    }
+  }
+
   return (
     <div className='PrimaryHeader_Body'>
     <Modal
@@ -91,7 +103,9 @@ const PrimaryHeader = () => {
         ? 'Continue'
         : 'Disabled'
       }>
-        Continue
+        {
+          ButtonText()
+        }
       </Button>
       </div>
     </Modal>
@@ -126,7 +140,7 @@ const PrimaryHeader = () => {
       </ul>
       </div>
       <div className="Buttons">
-      <Button className='PrimaryHeader_Links_Log_In'>
+      <Button className='PrimaryHeader_Links_Log_In' href='/log-in'>
         LOG IN
       </Button>
       <Button className='PrimaryHeader_Links_Sign_Up' onClick={openModal}>
