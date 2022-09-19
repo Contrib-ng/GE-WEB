@@ -140,7 +140,7 @@ const PrimaryHeader = () => {
       </ul>
       </div>
       <div className="Buttons">
-      <Button className='PrimaryHeader_Links_Log_In' href='/log-in'>
+      <Button className='PrimaryHeader_Links_Log_In' href='log-in'>
         LOG IN
       </Button>
       <Button className='PrimaryHeader_Links_Sign_Up' onClick={openModal}>
