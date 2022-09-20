@@ -19,11 +19,10 @@ export const Logo = () => {
 
 const PrimaryHeader = () => {
   const context = useContext(ModalSignUpContext)
-  const { modalOpen, setModalOpen } = context
+  const { setModalOpen } = context
 
   function OpenModal() {
     setModalOpen(true)
-    console.log(modalOpen)
   }
   return (
       <div className='PrimaryHeader_Body'>

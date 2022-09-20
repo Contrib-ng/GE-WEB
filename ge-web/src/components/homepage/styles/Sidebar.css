@@ -1,5 +1,5 @@
 /* Hamburger Menu */
-.Menu{
+.Menu, .Overlay{
     margin: 0;
 }
 /* Individual item */
@@ -43,7 +43,7 @@
   
 /* Color/shape of close button cross */
 .bm-cross {
-    background: #FB5012;
+    color: white;
   }
 
   /* General sidebar styles */

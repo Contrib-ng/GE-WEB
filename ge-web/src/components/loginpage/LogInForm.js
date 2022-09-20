@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Formik } from 'formik'
 import { Button, Form } from 'react-bootstrap'
 import Divider from '@mui/material/Divider'
@@ -7,6 +7,8 @@ import { Icon } from '@iconify/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock, faLockOpen, faEnvelope, faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 import * as Yup from 'yup'
+import { ModalSignUpContext } from '../homepage/States'
+import SignUpModal from '../homepage/SignUpModal'
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -15,9 +17,16 @@ const LogInSchema = Yup.object().shape({
 })
 
 const LogInForm = () => {
+  const context = useContext(ModalSignUpContext)
+  const { setModalOpen } = context
+
+  function openModal(){
+    setModalOpen(true)
+  }
     const [showPassword, setShowPassword] = useState(false)
   return (
     <div className="LogInForm_Body">
+    <SignUpModal />
       <Formik
       initialValues={{ email: '', password: '', toggle: false}}
       validationSchema={LogInSchema}
@@ -100,7 +109,7 @@ const LogInForm = () => {
             <p> Continue with Apple</p>
             </Button>
             </div>
-            <h4> Don't have an account? <em> Sign Up</em></h4>
+            <h4> Don't have an account? <em onClick={openModal} style={{ cursor: 'pointer'}}> Sign Up</em></h4>
           </div>
         )}
       </Formik>
