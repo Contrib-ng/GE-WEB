@@ -7,6 +7,16 @@ import { HamburgerMenu } from './Sidebar'
 import SignUpModal from './SignUpModal'
 import { ModalSignUpContext } from './States'
 
+export const Logo = () => {
+  return (
+    <div className='PrimaryHeader_Logo Show_Mobile_Logo'>
+      <a href='/' >
+      <img src='images/3.png' alt='LOGO'/>
+      </a>
+    </div>
+  )
+}
+
 const PrimaryHeader = () => {
   const context = useContext(ModalSignUpContext)
   const { modalOpen, setModalOpen } = context
@@ -18,9 +28,7 @@ const PrimaryHeader = () => {
   return (
       <div className='PrimaryHeader_Body'>
       <SignUpModal />
-      <div className='PrimaryHeader_Logo Show_Mobile_Logo'>
-      <img src='images/3.png' alt='LOGO'/>
-      </div>
+      <Logo />
       <div className="Menu_Show">
       <HamburgerMenu />
       </div>

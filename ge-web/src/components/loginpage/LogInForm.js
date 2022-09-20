@@ -5,7 +5,7 @@ import Divider from '@mui/material/Divider'
 import './styles/LogInForm.css'
 import { Icon } from '@iconify/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLock, faLockOpen, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faLock, faLockOpen, faEnvelope, faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 import * as Yup from 'yup'
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -29,6 +29,9 @@ const LogInForm = () => {
       >
         {({handleChange, handleBlur, handleSubmit, values, isValid, errors}) => (
           <div className='Form'>
+          <a href="/">
+          <FontAwesomeIcon icon={faArrowLeftLong} className='IconBack' color='#FB5012'/>
+          </a>
           <h1> Welcome Back</h1>
           <p> Log in to your account</p>
           <div className="error">{

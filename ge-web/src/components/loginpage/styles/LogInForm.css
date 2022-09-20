@@ -19,6 +19,18 @@
     text-align: center;
 }
 
+.Form .IconBack{
+    display: none;
+    align-self: flex-start;
+    margin-left: -10px;
+    width: 20px;
+    margin-top: -20px;
+}
+
+.Form a {
+    width: 20px;
+}
+
 .Form .error {
     font-size: 10px;
     color: red;
@@ -30,7 +42,8 @@
     margin-top: 20px;
     border: 1px solid #0057C2;
     border-radius: 15px;
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     height: 34px;
     padding-left: 10px;
 }
@@ -49,7 +62,8 @@
     border: 1px solid #0057C2;
     background-color: #0057C2;
     border-radius: 15px;
-    width: 320px;
+    max-width: 320px;
+    width: 100%;
     height: 34px;
     color: white;
     cursor: pointer;
@@ -67,7 +81,8 @@
     border: 1px solid rgba(251, 80, 18, 0.1);
     background-color: rgba(251, 80, 18, 0.1);
     border-radius: 15px;
-    width: 320px;
+    max-width: 320px;
+    width: 100%;
     height: 40px;
     color: white;
     cursor: pointer;
@@ -112,5 +127,40 @@
 
 .LogInForm_Body h4 em {
     color: #FB5012;
+}
+
+@media only screen and (max-width: 1024px) {
+    .LogInForm_Body .Form h1 {
+        font-size: 30px;
+    }
+    .LogInForm_Body .Form p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .Form .IconBack {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .LogInForm_Body .Form  {
+        padding: 20px;
+    }
+    .LogInForm_Body .Form h1 {
+        font-size: 20px;
+    }
+    .LogInForm_Body .Form p {
+        font-size: 10px;
+    }
+    .Form .Email, 
+    .Form .Password,
+    .Form .RememberMe_ForgotPassword,
+    .Form .LoginButton,
+    .Form .OtherLoginMethod .OtherLoginMethod_Google,
+    .Form .OtherLoginMethod .OtherLoginMethod_Apple {
+        width: 90vw;
+    }
 }
 
