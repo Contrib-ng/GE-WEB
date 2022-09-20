@@ -1,0 +1,116 @@
+.LogInForm_Body .Form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.LogInForm_Body .Form h1 {
+    font-size: 34px;
+    color: #0057C2;
+    text-align: center;
+}
+
+.LogInForm_Body .Form p {
+    font-size: 18px;
+    color: #0057C2;
+    text-align: center;
+}
+
+.Form .error {
+    font-size: 10px;
+    color: red;
+    margin: 10px 0 -18px 5px;
+}
+
+.Form .Email, 
+.Form .Password {
+    margin-top: 20px;
+    border: 1px solid #0057C2;
+    border-radius: 15px;
+    width: 300px;
+    height: 34px;
+    padding-left: 10px;
+}
+
+.Form .RememberMe_ForgotPassword {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Form .RememberMe_ForgotPassword p {
+    font-size: 12px;
+}
+
+.Form .LoginButton {
+    border: 1px solid #0057C2;
+    background-color: #0057C2;
+    border-radius: 15px;
+    width: 320px;
+    height: 34px;
+    color: white;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.Form .OtherLoginMethod {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.Form .OtherLoginMethod .OtherLoginMethod_Google {
+    border: 1px solid rgba(251, 80, 18, 0.1);
+    background-color: rgba(251, 80, 18, 0.1);
+    border-radius: 15px;
+    width: 320px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+.Form .OtherLoginMethod .OtherLoginMethod_Google p {
+    color: black;
+    font-size: 14px;
+    padding: 8px 0;
+}
+
+.Form .OtherLoginMethod .OtherLoginMethod_Apple {
+    border: 1px solid #0057C2;
+    background-color: white;
+    border-radius: 15px;
+    width: 320px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+.Form .OtherLoginMethod .OtherLoginMethod_Apple p {
+    color: #0057C2;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.Form .OtherLoginMethod Button .Icon {
+    width: 40px;
+    height: 28px;
+    padding: 3px 0;
+}
+
+.LogInForm_Body h4 {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+    color: #0057C2;
+}
+
+.LogInForm_Body h4 em {
+    color: #FB5012;
+}
+

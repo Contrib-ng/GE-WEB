@@ -4,13 +4,15 @@ import Footer from '../components/homepage/Footer'
 import LessOfficeWork from '../components/homepage/LessOfficeWork'
 import PrimaryHeader from '../components/homepage/PrimaryHeader'
 import SecondaryHeader from '../components/homepage/SecondaryHeader'
+import ModalSignUpContextProvider from '../components/homepage/States'
 import Testimonials from '../components/homepage/Testimonials'
 import TopBody from '../components/homepage/TopBody'
 import WhyGetEmployed from '../components/homepage/WhyGetEmployed'
 
 const Homepage = () => {
   return (
-    <div className='Homepage_Body' style={{ width: '100%', overflow: 'hidden'}}>
+    <ModalSignUpContextProvider>
+      <div className='Homepage_Body' style={{ width: '100%', overflow: 'hidden'}}>
       <PrimaryHeader />
       <SecondaryHeader />
       <TopBody />
@@ -20,6 +22,7 @@ const Homepage = () => {
       <LessOfficeWork />
       <Footer />
     </div>
+    </ModalSignUpContextProvider>
   )
 }
 

@@ -7,4 +7,8 @@ WEB VERSION OF THE PRODUCT
 REACTJS, NPM, NODE, EXPRESS,
 
 The live preview is hosted on netlify at
-https://gecweb.netlify.app
+<https://gecweb.netlify.app>
+
+## To run program on local host
+
+npm run build

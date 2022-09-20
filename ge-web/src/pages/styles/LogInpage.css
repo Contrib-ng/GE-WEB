@@ -1,0 +1,11 @@
+.LogInpage_Body {
+   height: 100vh;
+   background-color: rgb(239, 239, 239);
+}
+
+.LogInpage_Body .LogInPage_Form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

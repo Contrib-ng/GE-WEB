@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/SecondaryHeader.css'
+import './styles/SecondaryHeader.css'
 import {Button} from 'react-bootstrap'
 
 const Jobs = [

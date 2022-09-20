@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/WhyGetEmployed.css'
+import './styles/WhyGetEmployed.css'
 
 const CircleImages = [
     {

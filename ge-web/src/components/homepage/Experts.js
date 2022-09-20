@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../styles/Experts.css'
+import './styles/Experts.css'
 import {Button} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCaretDown, faCaretUp} from '@fortawesome/free-solid-svg-icons'
