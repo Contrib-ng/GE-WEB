@@ -7,9 +7,9 @@ import { HamburgerMenu } from './Sidebar'
 import SignUpModal from './SignUpModal'
 import { ModalSignUpContext } from './States'
 
-export const Logo = () => {
+export const Logo = (props) => {
   return (
-    <div className='PrimaryHeader_Logo Show_Mobile_Logo'>
+    <div className={props.classname}>
       <a href='/' >
       <img src='images/3.png' alt='LOGO'/>
       </a>
@@ -27,7 +27,9 @@ const PrimaryHeader = () => {
   return (
       <div className='PrimaryHeader_Body'>
       <SignUpModal />
-      <Logo />
+      <div className="Show_Mobile_Logo">
+      <Logo classname="PrimaryHeader_Logo"/>
+      </div>
       <div className="Menu_Show">
       <HamburgerMenu />
       </div>

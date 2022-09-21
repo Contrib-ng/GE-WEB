@@ -51,11 +51,18 @@ export const SignUpModal = () => {
         return "Apply as an expert"
       } else if (selectedSignUp === 'Both'){
         return "Be both"
-      } else {
-        return 'Continue'
       }
     }
 
+    function ButtonLink(){
+      if (selectedSignUp === 'Client'){
+        return '/client-signup'
+      } else if (selectedSignUp === 'Expert'){
+        return '/'
+      } else if (selectedSignUp === 'Both'){
+        return '/'
+      }
+    }
   return (
     <ModalSignUpContextProvider>
     <Modal
@@ -94,15 +101,15 @@ export const SignUpModal = () => {
       <FontAwesomeIcon icon={faMercury} className='Icon'/>     
         You can be both, Hire and work
       </div>
-      <Button className={
+      {
         selectedSignUp !== ''
-        ? 'Continue'
-        : 'Disabled'
-      }>
+        && <Button className="Continue" href={ButtonLink()}
+      >
         {
           ButtonText()
         }
       </Button>
+      }
       </div>
     </Modal>
     </ModalSignUpContextProvider>

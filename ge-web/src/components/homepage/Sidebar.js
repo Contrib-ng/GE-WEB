@@ -2,9 +2,8 @@ import React from 'react'
 import { slide as Menu} from 'react-burger-menu'
 import './styles/Sidebar.css'
 import './styles/PrimaryHeader.css'
-
-const HAMBURGERMENU = 'images/hamburger.png'
-const CLOSEMENU = 'images/close.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faBars, faClose} from '@fortawesome/free-solid-svg-icons'
 
 export const HamburgerMenu = () => {
     return(
@@ -13,8 +12,8 @@ export const HamburgerMenu = () => {
         right 
         width={250}
         noOverlay
-        customBurgerIcon= {<img src={HAMBURGERMENU} alt=''/>}
-        customCrossIcon= {<img src={CLOSEMENU} alt=''/>}
+        customBurgerIcon= {<FontAwesomeIcon icon={faBars} color='#FB5012'/> }
+        customCrossIcon= {<FontAwesomeIcon icon={faClose} color='white'/> }
         >
         <div className='PrimaryHeader_Logo'>
         <img src='images/3.png' alt='LOGO'/>

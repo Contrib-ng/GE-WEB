@@ -3,6 +3,7 @@ import Homepage from './pages/Homepage';
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import LogInpage from './pages/LogInpage';
 import ModalSignUpContextProvider  from './components/homepage/States';
+import { ClientSignUppage } from './pages/SignUppage';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <Routes>
       {/* Not signed in stack */}
         <Route path='/' element={<Homepage />}/>
-        <Route path='/log-in' element={<LogInpage/>} />
+        <Route path='/log-in' element={<LogInpage />} />
+        <Route path='/client-signup' element={<ClientSignUppage />} />
       </Routes>
     </BrowserRouter>
     </ModalSignUpContextProvider>

@@ -11,4 +11,8 @@ The live preview is hosted on netlify at
 
 ## To run program on local host
 
-npm run build
+npm start
+
+## Reprogrammed the build command to sequentially run a netlify production
+
+npm run build-netlify

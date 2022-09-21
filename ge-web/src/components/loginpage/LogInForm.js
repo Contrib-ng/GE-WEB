@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { Formik } from 'formik'
 import { Button, Form } from 'react-bootstrap'
 import Divider from '@mui/material/Divider'
 import './styles/LogInForm.css'
 import { Icon } from '@iconify/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLock, faLockOpen, faEnvelope, faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
+import { faLock, faLockOpen, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import * as Yup from 'yup'
 import { ModalSignUpContext } from '../homepage/States'
 import SignUpModal from '../homepage/SignUpModal'
@@ -18,12 +18,11 @@ const LogInSchema = Yup.object().shape({
 
 const LogInForm = () => {
   const context = useContext(ModalSignUpContext)
-  const { setModalOpen } = context
+  const { setModalOpen, showPassword, setShowPassword } = context
 
   function openModal(){
     setModalOpen(true)
   }
-    const [showPassword, setShowPassword] = useState(false)
   return (
     <div className="LogInForm_Body">
     <SignUpModal />
@@ -38,15 +37,12 @@ const LogInForm = () => {
       >
         {({handleChange, handleBlur, handleSubmit, values, isValid, errors}) => (
           <div className='Form'>
-          <a href="/">
-          <FontAwesomeIcon icon={faArrowLeftLong} className='IconBack' color='#FB5012'/>
-          </a>
           <h1> Welcome Back</h1>
           <p> Log in to your account</p>
           <div className="error">{
-            errors.email === 'email is a required field' 
-            ? ''
-            : 'Invalid Email'
+            errors.email === 'Invalid Email' 
+            ? 'Invalid Email'
+            : ''
             }</div>
             <Form.Group>
               <Form.Control 
