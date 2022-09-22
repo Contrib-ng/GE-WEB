@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button } from 'react-bootstrap'
 import {faUser, faArrowsDownToPeople, faMercury} from '@fortawesome/free-solid-svg-icons'
 import Modal from 'react-modal' 
-import ModalSignUpContextProvider, { ModalSignUpContext } from './States'
+import ModalContextProvider, { ModalContext } from './States'
 
 export const SignUpModal = () => { 
-    const context = useContext(ModalSignUpContext)
+    const context = useContext(ModalContext)
     const { selectedSignUp, setSelectedSignUp, modalOpen, setModalOpen} = context
     function closeModal() {
         setModalOpen(false)
@@ -58,13 +58,13 @@ export const SignUpModal = () => {
       if (selectedSignUp === 'Client'){
         return '/client-signup'
       } else if (selectedSignUp === 'Expert'){
-        return '/'
+        return '/expert-signup'
       } else if (selectedSignUp === 'Both'){
-        return '/'
+        return '/both-signup'
       }
     }
   return (
-    <ModalSignUpContextProvider>
+    <ModalContextProvider>
     <Modal
     isOpen={modalOpen}
     onRequestClose={closeModal}
@@ -112,7 +112,7 @@ export const SignUpModal = () => {
       }
       </div>
     </Modal>
-    </ModalSignUpContextProvider>
+    </ModalContextProvider>
   )
 }
 

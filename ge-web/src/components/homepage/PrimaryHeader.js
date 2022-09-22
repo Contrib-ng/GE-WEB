@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSearch} from '@fortawesome/free-solid-svg-icons'
 import { HamburgerMenu } from './Sidebar'
 import SignUpModal from './SignUpModal'
-import { ModalSignUpContext } from './States'
+import { ModalContext } from './States'
 
 export const Logo = (props) => {
   return (
@@ -18,7 +18,7 @@ export const Logo = (props) => {
 }
 
 const PrimaryHeader = () => {
-  const context = useContext(ModalSignUpContext)
+  const context = useContext(ModalContext)
   const { setModalOpen } = context
 
   function OpenModal() {

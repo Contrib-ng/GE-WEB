@@ -1,4 +1,6 @@
-.ClientSignUppage_Body {
+.ClientSignUppage_Body,
+.ExpertSignUppage_Body,
+.BothSignUppage_Body {
     height: 100vh !important;
     position: relative;
     background-image: 
@@ -9,7 +11,9 @@
     background-size: cover !important;
 }
 
-.ClientSignUppage_Body .ClientSignUppage_Form{
+.ClientSignUppage_Body .ClientSignUppage_Form,
+.ExpertSignUppage_Body .ExpertSignUppage_Form,
+.BothSignUppage_Body .BothSignUppage_Form{
     position: absolute;
     display: flex;
     top: 50%;

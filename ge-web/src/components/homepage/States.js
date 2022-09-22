@@ -1,19 +1,19 @@
 import React, {useState} from 'react'
 
-export const ModalSignUpContext = React.createContext({})
+export const ModalContext = React.createContext({})
 
-const ModalSignUpContextProvider = ({ children }) => {
+const ModalContextProvider = ({ children }) => {
     const [selectedSignUp, setSelectedSignUp] = useState('')
     const [modalOpen, setModalOpen] = useState(false)
     const [showPassword, setShowPassword] = useState(false)
 
     return (
-        <ModalSignUpContext.Provider value={{
+        <ModalContext.Provider value={{
             selectedSignUp, setSelectedSignUp, modalOpen, setModalOpen, showPassword, setShowPassword
              }}>
         {children}
-        </ModalSignUpContext.Provider>
+        </ModalContext.Provider>
     )
 }
 
-export default ModalSignUpContextProvider
+export default ModalContextProvider

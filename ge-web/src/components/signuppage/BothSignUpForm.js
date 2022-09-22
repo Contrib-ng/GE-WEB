@@ -5,32 +5,32 @@ import { Divider } from '@mui/material'
 import { Formik } from 'formik'
 import React, { useContext } from 'react'
 import { Button, Form } from 'react-bootstrap'
-import './styles/ClientSignUpForm.css'
+import './styles/BothSignUpForm.css'
 import * as Yup from 'yup'
 import { ModalContext } from '../homepage/States'
 
-const ClientSignUpSchema = Yup.object().shape({
+const BothSignUpSchema = Yup.object().shape({
   firstName: Yup.string().required(),
   lastName: Yup.string().required(),
   email: Yup.string().email('Invalid Email').required(),
   password: Yup.string().min(6, 'Error')
 })
 
-const ClientSignUpForm = () => {
+const BothSignUpForm = () => {
   const context = useContext(ModalContext)
   const { showPassword, setShowPassword } = context
   return (
-    <div className='ClientSignUpForm_Body'>
+    <div className='BothSignUpForm_Body'>
     <Formik
-    validationSchema={ClientSignUpSchema}
+    validationSchema={BothSignUpSchema}
     validateOnMount
     initialValues={{ firstName: '', lastName: '', email: '', password: ''}}
     onSubmit={(values) => console.log(values.email)}
     >
       {({handleBlur, handleChange, values, isValid, handleSubmit, errors}) => (
         <div className="Form">
-          <h1> Client Registration</h1>
-          <p> Hire experts </p>
+          <h1> Get the best of both</h1>
+          <p> Get the job and hire projects </p>
           {/* form style imported from loginform.css */}
           <Form.Group>
             <Form.Control 
@@ -103,18 +103,31 @@ const ClientSignUpForm = () => {
                 />
               }
           </Form.Group>
-          <div className="Terms_Condition" style={{
+          <div style={{
              display: 'flex', gap: '5px',
-             marginTop: '20px'
+             marginTop: '10px'
+             }}>
+            <Form.Check type='checkbox' />
+              <p style={{
+                color: 'black',
+                fontSize: '8px',
+                marginTop: '3px',
+                textAlign: 'left'
+              }}>I understand and agree with the 
+              <em style={{ color: '#fb5012'}}> Get Employed Terms of Service <br/> and  
+              Privacy Policy</em></p>
+          </div>
+          <div style={{
+             display: 'flex', gap: '5px',
+             marginTop: '5px'
              }}>
             <Form.Check type='checkbox' />
               <p style={{
                 color: 'black',
                 fontSize: '8px',
                 marginTop: '3px'
-              }}>I understand and agree with the 
-              <em style={{ color: '#fb5012'}}> Get Employed Terms of Service <br/> and  
-              Privacy Policy</em></p>
+              }}>  Send me mails for job vacancies
+             </p>
           </div>
           <Button variant='success' className='SignUpButton'
             size='md' type='button'
@@ -136,4 +149,4 @@ const ClientSignUpForm = () => {
   )
 }
 
-export default ClientSignUpForm
+export default BothSignUpForm

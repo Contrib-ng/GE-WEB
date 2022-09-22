@@ -7,7 +7,7 @@ import { Icon } from '@iconify/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock, faLockOpen, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import * as Yup from 'yup'
-import { ModalSignUpContext } from '../homepage/States'
+import { ModalContext } from '../homepage/States'
 import SignUpModal from '../homepage/SignUpModal'
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -17,7 +17,7 @@ const LogInSchema = Yup.object().shape({
 })
 
 const LogInForm = () => {
-  const context = useContext(ModalSignUpContext)
+  const context = useContext(ModalContext)
   const { setModalOpen, showPassword, setShowPassword } = context
 
   function openModal(){
