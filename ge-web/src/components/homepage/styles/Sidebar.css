@@ -9,57 +9,35 @@
     margin-bottom: 20px;
     color: white;
     transition: color 0.2s;
-  }
+}
 
-.bm-item-list {
-  padding: 0 0 0 1em;
+.bm-menu {
+  padding-left: 1em;
   backdrop-filter: blur( 20px );
   -webkit-backdrop-filter: blur( 20px );
-  background: rgba(251, 80, 18, 0.4);
+  background: rgba(251, 80, 18, 0.8);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 200px;
+  height: 60vh !important;
+  margin-left: 50px;
+  margin-top: -40px;
 }
 /* Position and sizing of burger button */
 .bm-burger-button {
-    position: fixed;
     width: 36px;
     height: 30px;
-    top: 20px;
-  }
+    margin-top: 20px;
+}
 
-  /* Color/shape of burger icon bars */
-.bm-burger-bars {
-    background: #FB5012;
-  }
+.bm-overlay {
+  background-color: white !important;
+  opacity: 0 !important;
+  height: 100vh !important;
+}
 
-  
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-    height: 24px;
-    width: 24px;
-  }
-
-  
-/* Color/shape of close button cross */
-.bm-cross {
-    color: white;
-  }
-
-  /* General sidebar styles */
-.bm-menu {
-    /* padding: 0 0 0 1em; */
-    font-size: 1.15em;
-    backdrop-filter: blur( 1px );
-    -webkit-backdrop-filter: blur( 1px );
-    background: rgba(251, 80, 18, 0.4);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    height: 100vh !important;
-  }
-
-  @media only screen and (max-width: 528px) {
+@media only screen and (max-width: 528px) {
     .bm-burger-button {
       width: 26px;
       height: 20px;

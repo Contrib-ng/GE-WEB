@@ -3,7 +3,7 @@ import { slide as Menu} from 'react-burger-menu'
 import './styles/Sidebar.css'
 import './styles/PrimaryHeader.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faBars, faClose} from '@fortawesome/free-solid-svg-icons'
+import {faBars} from '@fortawesome/free-solid-svg-icons'
 
 export const HamburgerMenu = () => {
     return(
@@ -11,9 +11,8 @@ export const HamburgerMenu = () => {
         className='Menu' 
         right 
         width={250}
-        noOverlay
         customBurgerIcon= {<FontAwesomeIcon icon={faBars} color='#FB5012'/> }
-        customCrossIcon= {<FontAwesomeIcon icon={faClose} color='white'/> }
+        crossClassName={'cross'}
         >
         <div className='PrimaryHeader_Logo'>
         <img src='images/3.png' alt='LOGO'/>
