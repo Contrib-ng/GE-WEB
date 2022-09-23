@@ -113,25 +113,16 @@ Form .PrimaryHeader_Search_Logo{
     margin-left: -5%;
 }
 
-ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    padding: 5px;
-}
-
-ul li a, .Links {
+.Links {
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
     color: #0057C2;
     padding: 10px;
+    cursor: pointer;
 }
 
-ul li a:hover, ul li a:active, .Links:hover {
+.Links:active, .Links:hover {
     color: #FB5012;
 }
 
@@ -195,9 +186,6 @@ ul li a:hover, ul li a:active, .Links:hover {
     Form .PrimaryHeader_Search_Text {
         width: 250px;
     }
-    ul li a {
-        font-size: 16px;
-    }
     .Modal_Expert {
         padding: 15px 0;
         margin-bottom: 15px;
@@ -215,9 +203,6 @@ ul li a:hover, ul li a:active, .Links:hover {
 @media only screen and (max-width: 908px)  {
     Form .PrimaryHeader_Search_Text {
         width: 230px;
-    }
-    ul li a {
-        font-size: 14px;
     }
     .PrimaryHeader_Links_Log_In,
     .PrimaryHeader_Links_Sign_Up{
@@ -239,21 +224,9 @@ ul li a:hover, ul li a:active, .Links:hover {
 
 }
 
-@media only screen and (max-width: 812px) {
-    ul li a {
-        font-size: 13px;
-    }
-}
-
 @media only screen and (max-width: 786px)  {
     Form .PrimaryHeader_Search_Text {
         width: 200px;
-    }
-    ul {
-        margin-left: -30px;
-    }
-    ul li a {
-        font-size: 12px;
     }
     .Show_Mobile_Logo h1 {
         display: none;
@@ -277,10 +250,6 @@ ul li a:hover, ul li a:active, .Links:hover {
     .PrimaryHeader_Logo img {
         padding-left: 0;
     }
-    ul {
-       display: none;
-    }
-
     .Show_Mobile_Logo{
         display: none;
     }
@@ -304,6 +273,7 @@ ul li a:hover, ul li a:active, .Links:hover {
         margin-left: 50px;
     }
 }
+
 @media only screen and (max-width: 500px)  {
     .PrimaryHeader_Body {
         display: flex;

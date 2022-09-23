@@ -1,0 +1,119 @@
+.VacantJobs_Body {
+    margin-top: 30px;
+    width: 98%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+}
+
+.VacantJobs_Body .VacantJob_Card {
+    border: 1px solid #ebecf0;
+    width: 300px;
+    height: 200px;
+    padding: 20px 10px ;
+    border-radius: 10px;
+    margin: 0 10px 10px 0;
+}
+
+.VacantJob_Card h1 {
+    font-size: 25px;
+    color: #0057c2;
+}
+
+.VacantJob_Card .Location {
+    display: flex;
+    gap: 5px;
+}
+.VacantJob_Card .Location p {
+    color: #d3d3d3;
+    font-size: 16px;
+}
+
+.VacantJob_Card h2 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.VacantJob_Card  .Price_Button{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.VacantJob_Card  .Price_Button h3{
+    font-size: 20px;
+    color: #fb5017;
+}
+
+.VacantJob_Card  .Price_Button Button{
+    padding: 5px 15px;
+    margin-top: -5px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    background-color: #0057c2;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+    .VacantJobs_Body{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5%;
+    }
+    .VacantJobs_Body .VacantJob_Card {
+        margin: 0 0 0 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .VacantJobs_Body{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1%;
+    }
+    .VacantJobs_Body .VacantJob_Card {
+        margin: 0 0 0 0;
+        width: 280px;
+        padding: 15px;
+    }
+    .VacantJob_Card h1 {
+        font-size: 23px;
+    }
+    .VacantJob_Card h2 {
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .VacantJobs_Body{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1%;
+    }
+    .VacantJob_Card h1 {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .VacantJobs_Body .VacantJob_Card {
+        width: 250px;
+    }
+    .VacantJob_Card h1 {
+        font-size: 16px;
+    }
+    .VacantJobs_Body {
+        margin-top: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 321px) {
+    .VacantJobs_Body .VacantJob_Card {
+        width: 220px;
+        margin: 0 1px 0 1px !important;
+    }
+    .VacantJob_Card h1 {
+        font-size: 16px;
+    }
+}
