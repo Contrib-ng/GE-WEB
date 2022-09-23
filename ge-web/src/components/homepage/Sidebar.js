@@ -7,10 +7,9 @@ import {faBars} from '@fortawesome/free-solid-svg-icons'
 
 export const HamburgerMenu = () => {
     return(
-        <Menu 
-        className='Menu' 
+        <Menu  
+        burgerButtonClassName='Menu'
         right 
-        width={250}
         customBurgerIcon= {<FontAwesomeIcon icon={faBars} color='#FB5012'/> }
         crossClassName={'cross'}
         >

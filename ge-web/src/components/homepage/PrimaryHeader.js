@@ -1,11 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './styles/PrimaryHeader.css'
-import {Form, FormControl, Button} from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faSearch} from '@fortawesome/free-solid-svg-icons'
-import { HamburgerMenu } from './Sidebar'
 import SignUpModal from './SignUpModal'
-import { ModalContext } from './States'
+import HomepageNavigation from '../navigations/HomepageNavigation'
 
 export const Logo = (props) => {
   return (
@@ -18,53 +14,10 @@ export const Logo = (props) => {
 }
 
 const PrimaryHeader = () => {
-  const context = useContext(ModalContext)
-  const { setModalOpen } = context
-
-  function OpenModal() {
-    setModalOpen(true)
-  }
   return (
       <div className='PrimaryHeader_Body'>
       <SignUpModal />
-      <div className="Show_Mobile_Logo">
-      <Logo classname="PrimaryHeader_Logo"/>
-      </div>
-      <div className="Menu_Show">
-      <HamburgerMenu />
-      </div>
-      <div className="PrimaryHeader_Search">
-      <Form inline="true" >
-        <FormControl placeholder='Search skills, experts'  className='PrimaryHeader_Search_Text' type='text'/>
-        <Button type='submit' variant='primary' className='PrimaryHeader_Search_Logo'>
-        <FontAwesomeIcon icon={faSearch} size='lg' color='white'/>
-        </Button>
-      </Form>
-      </div>
-      <div className="PrimaryHeader_Links">
-      <ul>
-        <li>
-          <a href="/"> Skill</a>
-        </li>
-        <li>
-          <a href="/"> Experts</a>
-        </li>
-        <li>
-          <a href="/"> Why us?</a>
-        </li>
-        <li> 
-          <a href="/"> About us</a>
-        </li>
-      </ul>
-      </div>
-      <div className="Buttons">
-      <Button className='PrimaryHeader_Links_Log_In' href='/log-in'>
-        LOG IN
-      </Button>
-      <Button className='PrimaryHeader_Links_Sign_Up' onClick={OpenModal}>
-        SIGN UP
-      </Button>
-      </div>
+      <HomepageNavigation />
     </div>
   )
 }

@@ -1,6 +1,6 @@
 .PrimaryHeader_Body {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 67px;
     display: flex;
     flex-direction: row;
@@ -84,16 +84,8 @@ path {
     margin-right: 20px;
 }
 
-.PrimaryHeader_Body .Menu_Show {
+.Menu, .Overlay, #react-burger-menu-btn {
     display: none;
-}
-
-.PrimaryHeader_Logo {
-    width: 70px;
-}
-
-.PrimaryHeader_Logo img {
-    padding-left: 10px;
 }
 
 
@@ -131,22 +123,28 @@ ul li {
     padding: 5px;
 }
 
-ul li a {
+ul li a, .Links {
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
     color: #0057C2;
+    padding: 10px;
 }
 
-ul li a:hover, ul li a:active {
+ul li a:hover, ul li a:active, .Links:hover {
     color: #FB5012;
+}
+
+.Show_Mobile_Logo h1 {
+    margin-top: 20px;
+    margin-right: 10px
 }
 
 .Buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    margin-right: 25px;
+    padding-left: 30px;    
 }
 
 .Buttons a {
@@ -204,6 +202,14 @@ ul li a:hover, ul li a:active {
         padding: 15px 0;
         margin-bottom: 15px;
     }
+    .Show_Mobile_Logo h1 {
+       font-size: 16px;
+       margin-top: 22px;
+    }
+    .Links {
+        font-size: 16px;
+        padding: 5px;
+    }
 }
 
 @media only screen and (max-width: 908px)  {
@@ -222,6 +228,14 @@ ul li a:hover, ul li a:active {
         height: 22px;
         padding-top: 6px;
     }
+    .Show_Mobile_Logo h1 {
+        font-size: 15px;
+        margin-top: 22px;
+     }
+     .Links {
+         font-size: 16px;
+         padding: 2px;
+     }
 
 }
 
@@ -241,10 +255,17 @@ ul li a:hover, ul li a:active {
     ul li a {
         font-size: 12px;
     }
+    .Show_Mobile_Logo h1 {
+        display: none;
+     }
+     .Links {
+         font-size: 14px;
+         padding: 5px;
+     }
 }
 
 @media only screen and (max-width: 730px)  {
-    .PrimaryHeader_Body .Menu_Show {
+    .Menu, .Overlay, #react-burger-menu-btn {
         display: flex;
         padding-left: 10px;
         height: 250px;
@@ -271,7 +292,7 @@ ul li a:hover, ul li a:active {
         margin-left: 50px;
     }
     .Buttons {
-        margin-right: 15px;
+        margin-top: 15px;
         gap: 5px;
     }
 }
@@ -288,7 +309,9 @@ ul li a:hover, ul li a:active {
         display: flex;
         margin: 0 10px;
     }
-    .PrimaryHeader_Search{
+    .PrimaryHeader_Search,
+    .PrimaryHeader_Logo,
+    .PrimaryHeader_Links{
         display: none;
     }
     h1 {
