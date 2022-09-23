@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
-import '../styles/SecondaryHeader.css'
+import React from 'react'
+import './styles/SecondaryHeader.css'
 import {Button} from 'react-bootstrap'
 
 const Jobs = [
@@ -30,43 +30,35 @@ const Jobs = [
 ]
 
 const SecondaryHeader = () => {
-    const ref = useRef(null)
-    const [bodyWidth, setBodyWidth] = useState()
-    useEffect(() => {
-        setBodyWidth(ref.current.offsetWidth)
-    }, [bodyWidth])
+    function SecondaryHeaderJobs() {
+        if (window.innerWidth > 768)
+        return Jobs.map(job => {
+            return <h2 className='SecondaryHeader_Jobs' key={job.name}>
+                {job.name}
+            </h2>
+        }); else if (window.innerWidth <= 768 && window.innerWidth >= 427)
+        return Jobs.slice(0,-1).map(job => {
+            return <h2 className='SecondaryHeader_Jobs' key={job.name}>
+                {job.name}
+            </h2>
+        }); else if (window.innerWidth <= 425)
+        return Jobs.slice(0,-3).map(job => {
+            return <h2 className='SecondaryHeader_Jobs' key={job.name}>
+                {job.name}
+            </h2>
+        })
+    }
   return (
-    <div className='SecondaryHeader_Body' ref={ref}>
+    <div className='SecondaryHeader_Body'>
         <div className='SecondaryHeader_Body_Jobs'>
         {
-            (bodyWidth > 768)
-            && Jobs.map(job => {
-                return <h2 className='SecondaryHeader_Jobs' key={job.name}>
-                    {job.name}
-                </h2>
-            })
-        }
-        {
-            (bodyWidth <= 768 && bodyWidth >= 427)
-            && Jobs.slice(0,-1).map(job => {
-                return <h2 className='SecondaryHeader_Jobs' key={job.name}>
-                    {job.name}
-                </h2>
-            })
-        }
-        {
-            bodyWidth <= 425
-            && Jobs.slice(0,-3).map(job => {
-                return <h2 className='SecondaryHeader_Jobs' key={job.name}>
-                    {job.name}
-                </h2>
-            })
+         SecondaryHeaderJobs()
         }
         </div>
         <div className="SecondaryHeader_All_Categories">
             <Button type='button'>
                 {
-                    bodyWidth <= 683
+                    window.innerWidth <= 683
                     ? 'MORE'
                     : 'ALL CATEGORIES'
                 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/LessOfficeWork.css'
+import './styles/LessOfficeWork.css'
 
 const LessOfficeWork = () => {
   return (

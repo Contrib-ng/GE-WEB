@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/TopBody.css'
+import './styles/TopBody.css'
 import {Button} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faArrowUpRightFromSquare} from '@fortawesome/free-solid-svg-icons'

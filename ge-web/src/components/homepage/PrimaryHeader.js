@@ -1,61 +1,34 @@
-import React, { useState } from 'react'
-import '../styles/PrimaryHeader.css'
+import React, { useContext } from 'react'
+import './styles/PrimaryHeader.css'
 import {Form, FormControl, Button} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faSearch, faUser, faArrowsDownToPeople, faMercury} from '@fortawesome/free-solid-svg-icons'
-import { HamburgerMenu } from '../Sidebar'
-import Modal from 'react-modal'
+import {faSearch} from '@fortawesome/free-solid-svg-icons'
+import { HamburgerMenu } from './Sidebar'
+import SignUpModal from './SignUpModal'
+import { ModalContext } from './States'
+
+export const Logo = (props) => {
+  return (
+    <div className={props.classname}>
+      <a href='/' >
+      <img src='images/3.png' alt='LOGO'/>
+      </a>
+    </div>
+  )
+}
 
 const PrimaryHeader = () => {
-  const [modalOpen, setModalOpen] = useState(false)
-  const modalStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50px',
-      transform: 'translate(-50%, -50%)',
-      color: '#0057C2',
-      padding: '40px',
-    },
-  }
-  
-  function openModal() {
+  const context = useContext(ModalContext)
+  const { setModalOpen } = context
+
+  function OpenModal() {
     setModalOpen(true)
   }
-  function closeModal() {
-    setModalOpen(false)
-  }
   return (
-    <div className='PrimaryHeader_Body'>
-    <Modal
-    isOpen={modalOpen}
-    onRequestClose={closeModal}
-    shouldCloseOnOverlayClick
-    preventScroll
-    style={modalStyles}
-    ariaHideApp={false}
-    >
-      <h1> Join Get Employed</h1>
-      <p style={{ fontSize: '8px'}}> Start your journey of utilization of skills and opportunities </p>
-      <div className="Modal_Content">
-      <Button className='Modal_Expert Client'>
-      <FontAwesomeIcon icon={faUser} className='Icon'/>
-        Be the client
-      </Button>
-      <Button className='Modal_Expert'>
-      <FontAwesomeIcon icon={faArrowsDownToPeople} className='Icon'/>
-        Be the expert
-      </Button>
-      <Button className='Modal_Expert Hybrid'>
-      <FontAwesomeIcon icon={faMercury} className='Icon'/>
-        Hybrid member
-      </Button>
-      </div>
-    </Modal>
-      <div className='PrimaryHeader_Logo Show_Mobile_Logo'>
-      <img src='images/3.png' alt='LOGO'/>
+      <div className='PrimaryHeader_Body'>
+      <SignUpModal />
+      <div className="Show_Mobile_Logo">
+      <Logo classname="PrimaryHeader_Logo"/>
       </div>
       <div className="Menu_Show">
       <HamburgerMenu />
@@ -79,21 +52,22 @@ const PrimaryHeader = () => {
         <li>
           <a href="/"> Why us?</a>
         </li>
-        <li>
+        <li> 
           <a href="/"> About us</a>
         </li>
       </ul>
       </div>
       <div className="Buttons">
-      <Button className='PrimaryHeader_Links_Log_In'>
+      <Button className='PrimaryHeader_Links_Log_In' href='/log-in'>
         LOG IN
       </Button>
-      <Button className='PrimaryHeader_Links_Sign_Up' onClick={openModal}>
+      <Button className='PrimaryHeader_Links_Sign_Up' onClick={OpenModal}>
         SIGN UP
       </Button>
       </div>
     </div>
   )
 }
+
 
 export default PrimaryHeader

@@ -1,0 +1,22 @@
+.ClientSignUppage_Body,
+.ExpertSignUppage_Body,
+.BothSignUppage_Body {
+    height: 100vh !important;
+    position: relative;
+    background-image: 
+    url(
+        'https://images.unsplash.com/photo-1663657473556-a8928dc06be9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80'
+        );
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.ClientSignUppage_Body .ClientSignUppage_Form,
+.ExpertSignUppage_Body .ExpertSignUppage_Form,
+.BothSignUppage_Body .BothSignUppage_Form{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

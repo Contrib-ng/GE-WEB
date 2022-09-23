@@ -1,0 +1,51 @@
+.ExpertSideNavigation {
+    border-right: 1px solid #d3d3d3;
+    height: 100%;
+    position: fixed;
+    padding: 40px 30px 0;
+}
+
+.ProfileInformation img {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin-right: 5px;
+}
+.ProfileInformation .Information{
+    margin-top: 10px;
+}
+
+.ProfileInformation .Information h2{
+    font-size: 18px;
+}
+
+.ProfileInformation .Information p{
+    font-size: 10px;
+    color: rgba(27, 27, 30, 0.29);
+}
+
+
+.ProfileInformation .Information em{
+    font-size: 8px;
+    color: #0057c2;
+    border: 1px solid #0057c2;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.Navigation .Nav_Link {
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+.Navigation .Nav_Link p {
+    margin-top: 3px;
+}
+
+.Navigation .Icons {
+    padding-right: 5px;
+    width: 25px;
+    height: 25px;
+}
