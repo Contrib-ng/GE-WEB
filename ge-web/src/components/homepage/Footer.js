@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/Footer.css'
+import './styles/Footer.css'
 import Divider from '@mui/material/Divider'
 import {Icon} from '@iconify/react'
 

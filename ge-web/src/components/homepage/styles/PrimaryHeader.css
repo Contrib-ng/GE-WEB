@@ -12,33 +12,69 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
+.Overlay {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
 .Modal_Content{
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 }
-
-.Modal_Content Button{
-    margin: 15px;
-}
-
-
 .Modal_Expert{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #0057C2;
+    border-radius: 10px;
+    background-color: rgba(0, 87, 194, 10%);
+    color: #0057C2;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.Continue{
     align-self: center;
     width: 100%;
-    height: 40px;
+    height: 20px;
     border: 1px solid #0057C2;
     border-radius: 20px;
     background-color: rgba(0, 87, 194, 10%);
     color: #0057C2;
     font-weight: 600;
     font-size: 18px;
+    text-decoration: none;
+    text-align: center !important;
+    padding: 10px 0;
 }
 
-.Modal_Expert .Icon {
-    margin-right: 10px;
+.Modal_Expert .Icon, 
+.Selected .Icon {
+    padding-bottom: 10px;
 }
 
-.Modal_Expert:hover {
+.Selected {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 20px 0;
+    margin-bottom: 20px;
     border: 1px solid #FB5012;
     color: white;
     background-color: #FB5012;
@@ -99,7 +135,8 @@ ul li a {
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
-    color: #0057C2;}
+    color: #0057C2;
+}
 
 ul li a:hover, ul li a:active {
     color: #FB5012;
@@ -112,6 +149,13 @@ ul li a:hover, ul li a:active {
     margin-right: 25px;
 }
 
+.Buttons a {
+    display: flex;
+    justify-content: center;
+    height: 24px;
+    padding-top: 3px;
+}
+
 .PrimaryHeader_Links_Log_In {
     align-self: center;
     width: 100px;
@@ -121,6 +165,7 @@ ul li a:hover, ul li a:active {
     background-color: rgba(0, 87, 194, 10%);
     color: #0057C2;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .PrimaryHeader_Links_Log_In:hover{
@@ -155,6 +200,10 @@ ul li a:hover, ul li a:active {
     ul li a {
         font-size: 16px;
     }
+    .Modal_Expert {
+        padding: 15px 0;
+        margin-bottom: 15px;
+    }
 }
 
 @media only screen and (max-width: 908px)  {
@@ -169,6 +218,11 @@ ul li a:hover, ul li a:active {
         width: 70px;
         font-size: 12px;
     }
+    .Buttons a {
+        height: 22px;
+        padding-top: 6px;
+    }
+
 }
 
 @media only screen and (max-width: 812px) {
@@ -202,11 +256,12 @@ ul li a:hover, ul li a:active {
     .PrimaryHeader_Logo img {
         padding-left: 0;
     }
-    .Show_Mobile_Logo {
-        display: none;
-    }
     ul {
        display: none;
+    }
+
+    .Show_Mobile_Logo{
+        display: none;
     }
 }
 
@@ -237,21 +292,30 @@ ul li a:hover, ul li a:active {
         display: none;
     }
     h1 {
-        font-size: 16px;
+        font-size: 18px;
     }
     .Modal_Expert {
-        font-size: 16px;
+        font-size: 14px;
+        padding: 10px 0;
+        margin-bottom: 10px;
     }
+    .Modal_Content{
+        width: 250px;
+    }
+
 }
 
 @media only screen and (max-width: 376px){
     h1{
-        font-size: 12px;
+        font-size: 16px;
     }
     p {
-        font-size: 10px;
+        font-size: 14px;
     }
     .Modal_Expert {
         font-size: 12px;
+    }
+    .Modal_Content{
+        width: 200px;
     }
 }
