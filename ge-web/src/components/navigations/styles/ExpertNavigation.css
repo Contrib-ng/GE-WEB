@@ -1,0 +1,111 @@
+.ExpertSideNavigation {
+    height: 100%;
+    position: fixed;
+    padding: 40px 0 0 30px;
+    overflow-y: auto;
+}
+
+.ProfileInformation {
+    display: flex;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+.ProfileInformation img {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin-right: 5px;
+}
+.ProfileInformation .Information{
+    margin-top: 10px;
+}
+
+.ProfileInformation .Information h2{
+    font-size: 18px;
+}
+
+.ProfileInformation .Information p{
+    font-size: 10px;
+    color: rgba(27, 27, 30, 0.29);
+}
+
+.ProfileInformation .Information em{
+    font-size: 8px;
+    color: #0057c2;
+    border: 1px solid #0057c2;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.Navigation{
+    width: 13% !important;
+}
+
+.Navigation .Nav_Link_Inactive {
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+.Navigation .Nav_Link_Active {
+    margin: 20px;
+    text-decoration: none;
+    color: #fb5012;
+    display: flex;
+}
+
+.Navigation .Nav_Link_Inactive p,
+.Navigation .Nav_Link_Active p{
+    margin-top: 3px;
+}
+
+.Navigation .Icons {
+    padding-right: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .ExpertSideNavigation {
+        padding: 40px 0 0 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ExpertSideNavigation {
+        padding: 40px 0 0 5px;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .Navigation .Nav_Link_Inactive p,
+    .Navigation .Nav_Link_Active p  {
+        display: none;
+    }
+    .ProfileInformation .Information{
+        display: none;
+    }  
+    .ExpertSideNavigation {
+        padding: 40px 0 0 5px;
+    }
+    .ProfileInformation img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        padding: 0 5px;
+    }
+    .Navigation{
+        width: 5% !important;
+    }
+    .Navigation .Nav_Link_Inactive img,
+    .Navigation .Nav_Link_Active img {
+        width: 20px;
+        height: 20px;
+    }
+    .Navigation .Nav_Link_Inactive,
+    .Navigation .Nav_Link_Active {
+        margin:  0 10px 30px 10px;
+    }
+}

@@ -135,7 +135,7 @@ Form .PrimaryHeader_Search_Logo{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    padding-left: 30px;    
+    margin-right: 5px;
 }
 
 .Buttons a {

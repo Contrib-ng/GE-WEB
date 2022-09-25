@@ -6,9 +6,9 @@ const ExpertGreetingBar = () => {
     <div className='ExpertGreetingBar_Body'>
     <div className="Greetings">
     <h1>Welcome, Afolabi Nuel</h1>
-    <p> +778 vacancies</p>
+    <h6> +778 vacancies</h6>
     </div>
-      <p> Let's get you employed</p>
+      <h6> Let's get you employed</h6>
     </div>
   )
 }

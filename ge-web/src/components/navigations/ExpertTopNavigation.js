@@ -16,9 +16,9 @@ const ExpertTopNavigation = () => {
             <Nav.Link className='Links'> Your Projects</Nav.Link>
         </Nav>
         <Nav className="ExpertTopNavigation_Icons">
-            <FontAwesomeIcon icon={faBell} color='#fb5012' style={{ paddingRight: '20px'}} className='TheIcon' />
-            <FontAwesomeIcon icon={faEnvelope} color='#fb5012' style={{ paddingRight: '20px'}} className='TheIcon' />
-            <FontAwesomeIcon icon={faRightFromBracket} color='#fb5012' style={{ paddingRight: '20px'}} className='TheIcon' />
+            <FontAwesomeIcon icon={faBell} color='#fb5012' className='TheIcon' />
+            <FontAwesomeIcon icon={faEnvelope} color='#fb5012' className='TheIcon' />
+            <FontAwesomeIcon icon={faRightFromBracket} color='#fb5012' className='TheIcon' />
         </Nav>
     </Navbar>
   )

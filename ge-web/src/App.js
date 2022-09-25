@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import LogInpage from './pages/LogInpage';
 import ModalContextProvider  from './components/homepage/States';
 import { BothSignUppage, ClientSignUppage, ExpertSignUppage } from './pages/SignUppage';
-import { ExpertAccount } from './pages/Accountpage';
+import { ClientAccount, ExpertAccount } from './pages/Accountpage';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         <Route path='/both-signup' element={<BothSignUppage />} />
       {/* Signed in stack */}
         <Route path='/expert' element={<ExpertAccount />} />
+        <Route path='/client' element={<ClientAccount />} />
       </Routes>
     </BrowserRouter>
     </ModalContextProvider>

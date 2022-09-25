@@ -1,12 +1,21 @@
 import React from 'react'
-import ExpertAccountPage from '../components/accountpage/ExpertAccountPage'
+import ClientAccountPage from '../components/accountpage/ClientAccountPage'
+import { ExpertNavigation } from '../components/navigations/ExpertNavigation'
 
 const ExpertAccount = () => {
   return (
-    <div className="ExpertAccountPage_Body" style={{ width: '100%', overflow:'hidden'}}>
-       <ExpertAccountPage />
+    <div className="ExpertAccount_Body">
+       <ExpertNavigation />
     </div>
   )
 }
 
-export { ExpertAccount }
+const ClientAccount = () => {
+  return (
+    <div className="ClientAccountPage_Body">
+      <ClientAccountPage />
+    </div>
+  )
+}
+
+export { ExpertAccount, ClientAccount}

@@ -1,37 +1,60 @@
 .Navbar {
     display: flex;
     justify-content: space-between;
+    width: 80vw;
 }
-.Navbar .ThisNav {
-    max-height: 100px;
+.Navbar .ExpertTopNavigation_Icons .TheIcon {
+    padding: 0 20px 0 0;
+}
+
+@media only screen and (max-width: 1024px){
+    .Navbar {
+        margin: 0 10px;
+        width: 78vw;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .Navbar {
+        width: 70vw;
+        margin-top: -10px;
+    }
+    .Navbar .ThisNav .Links {
+       font-size: 12px;
+    }
+    .Navbar .ExpertTopNavigation_Icons .TheIcon {
+        padding: 0 15px 0 0;
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 426px) {
     .Navbar{
         display: grid;
+        width: 80vw;
     }
-    .Navbar .Links{
-        font-size: 10px;
+    .Navbar .ThisNav .Links {
+        font-size: 9.5px;
     }
     .Navbar .ExpertTopNavigation_Icons{
         margin-top: 5px;
         text-align: end;
     }
     .Navbar .ExpertTopNavigation_Icons .TheIcon {
-        width: 10px;
+        font-size: 12px;
     }
 }
 
 @media only screen and (max-width: 376px) {
-    .Navbar .Links{
+    .Navbar .ThisNav .Links {
         font-size: 8px;
     }
 }
 @media only screen and (max-width: 321px) {
-    .Navbar .Links{
-        font-size: 7px;
+    .Navbar .ThisNav .Links {
+        font-size: 6px;
     }
-    .Navbar .ThisNav {
-        margin-top: -20px !important;
+    .Navbar .ExpertTopNavigation_Icons .TheIcon {
+        font-size: 10px;
     }
 }
