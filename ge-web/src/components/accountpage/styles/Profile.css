@@ -1,0 +1,118 @@
+.Profile_Body {
+    margin: 40px;
+}
+
+.Profile_Body .ProfileInformation{
+    gap: 20px;
+}
+
+.Profile_Body .ProfileInformation img{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+}
+
+.Profile_Body .ProfileInformation .Information {
+    padding-top: 20px;
+}
+
+.Profile_Body .ProfileInformation .Information h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.Profile_Body .ProfileInformation .Information p {
+    font-size: 18px;
+}
+
+.Profile_Body .ProfileInformation .Information em {
+    margin-right: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .Profile_Body .ProfileInformation .Information h2 {
+        font-size: 25px;
+    }
+    .Profile_Body .ProfileInformation .Information p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .Profile_Body {
+        margin: 20px;
+    }
+    .Profile_Body .ProfileInformation .Information {
+        padding-top: 5px;
+    }
+    .Profile_Body .ProfileInformation{
+        gap: 5px;
+    }
+    .Profile_Body .ProfileInformation img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px !important;
+    }
+    .Profile_Body .ProfileInformation .Information h2 {
+        font-size: 25px;
+        display: flex !important;
+    }
+    .Profile_Body .ProfileInformation .Information p {
+        font-size: 12px;
+        display: flex !important;
+    }
+    .Profile_Body .ProfileInformation .Information em {
+        display: flex !important;
+        width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .Profile_Body {
+        margin: 10px;
+    }
+    .Profile_Body .ProfileInformation .Information {
+        padding-top: 0;
+    }
+    .Profile_Body .ProfileInformation{
+        gap: 2px;
+    }
+    .Profile_Body .ProfileInformation img{
+        width: 70px;
+        height: 70px;
+        border-radius: 35px !important;
+    }
+    .Profile_Body .ProfileInformation .Information h2 {
+        font-size: 20px;
+        display: flex !important;
+    }
+    .Profile_Body .ProfileInformation .Information p {
+        font-size: 10px;
+        display: flex !important;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .Profile_Body {
+        margin: 5px 2px;
+    }
+    .Profile_Body .ProfileInformation .Information {
+        padding-top: 0;
+    }
+    .Profile_Body .ProfileInformation{
+        gap: 1px;
+    }
+    .Profile_Body .ProfileInformation img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50px !important;
+    }
+    .Profile_Body .ProfileInformation .Information h2 {
+        font-size: 16px;
+        display: flex !important;
+    }
+    .Profile_Body .ProfileInformation .Information p {
+        font-size: 10px;
+        display: flex !important;
+    }
+}

@@ -1,14 +1,13 @@
-.ExpertSideNavigation {
-    height: 100%;
+.ExpertSideNavigation,
+.ClientSideNavigation {
     position: fixed;
+    height: 100%;
     padding: 40px 0 0 30px;
     overflow-y: auto;
 }
 
 .ProfileInformation {
     display: flex;
-    padding-bottom: 30px;
-    width: 100%;
 }
 
 .ProfileInformation img {
@@ -56,25 +55,26 @@
     display: flex;
 }
 
-.Navigation .Nav_Link_Inactive p,
-.Navigation .Nav_Link_Active p{
-    margin-top: 3px;
-}
 
-.Navigation .Icons {
-    padding-right: 5px;
+.Navigation .Navigation_Container .Icons {
     width: 25px;
     height: 25px;
 }
 
+.Navigation .Navigation_Container p {
+    padding: 5px;
+}
+
 @media only screen and (max-width: 1024px) {
-    .ExpertSideNavigation {
+    .ExpertSideNavigation,
+    .ClientSideNavigation {
         padding: 40px 0 0 10px;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .ExpertSideNavigation {
+    .ExpertSideNavigation,
+    .ClientSideNavigation {
         padding: 40px 0 0 5px;
     }
 }
@@ -84,10 +84,13 @@
     .Navigation .Nav_Link_Active p  {
         display: none;
     }
-    .ProfileInformation .Information{
+    .ProfileInformation .Information h2,
+    .ProfileInformation .Information p,
+    .ProfileInformation .Information em{
         display: none;
     }  
-    .ExpertSideNavigation {
+    .ExpertSideNavigation,
+    .ClientSideNavigation {
         padding: 40px 0 0 5px;
     }
     .ProfileInformation img {
@@ -99,8 +102,8 @@
     .Navigation{
         width: 5% !important;
     }
-    .Navigation .Nav_Link_Inactive img,
-    .Navigation .Nav_Link_Active img {
+    .Navigation .Nav_Link_Inactive .Navigation_Container img,
+    .Navigation .Nav_Link_Active .Navigation_Container img {
         width: 20px;
         height: 20px;
     }

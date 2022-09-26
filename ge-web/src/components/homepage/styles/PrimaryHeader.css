@@ -180,8 +180,6 @@ Form .PrimaryHeader_Search_Logo{
     color: #0057C2;
 }
 
-
-/* A media query. It is saying that if the screen is less than Xpx. */
 @media only screen and (max-width: 1024px)  {
     Form .PrimaryHeader_Search_Text {
         width: 250px;

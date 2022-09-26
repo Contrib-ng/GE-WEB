@@ -1,8 +1,9 @@
-.ExpertDashboard_Body{
+.Body{
     width: 100vw;
+    /* animation: opacity 2s; */
 }
-.ExpertDashboard_TopNavigation{
-    margin: 20px 0 0 0;
+.Body_Components{
+    margin: 20px 0 10px 0;
     position: absolute;
     left: 260px;
     top: 0px;
@@ -10,13 +11,13 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .ExpertDashboard_TopNavigation{
+    .Body_Components{
         left: 220px;
     }
 }
 
 @media only screen and (max-width: 426px) {
-    .ExpertDashboard_TopNavigation{
+    .Body_Components{
         left: 70px;
     }
 }

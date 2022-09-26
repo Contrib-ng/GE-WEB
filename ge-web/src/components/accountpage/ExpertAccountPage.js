@@ -1,19 +1,29 @@
 import React from 'react'
 import ExpertTopNavigation from '../navigations/ExpertTopNavigation'
 import ExpertGreetingBar from './ExpertGreetingBar'
+import Profile from './Profile'
 import './styles/ExpertAccountPage.css'
 import VacantJobs from './VacantJobs'
 
-const ExpertDashboard = () => {
+export const ExpertDashboard = () => {
   return (
-    <div className="ExpertDashboard_Body">
-    <div className="ExpertDashboard_TopNavigation">
-    <ExpertTopNavigation />
-    <ExpertGreetingBar />
-    <VacantJobs />
-    </div>
+    <div className="Body">
+      <div className="Body_Components">
+        <ExpertTopNavigation />
+        <ExpertGreetingBar />
+        <VacantJobs />
+      </div>
     </div>
   )
 }
 
-export default ExpertDashboard
+export const ExpertProfile = () => {
+  return (
+    <div className="Body">
+      <div className="Body_Components">
+        <ExpertTopNavigation />
+        <Profile />
+      </div>
+    </div>
+  )
+}

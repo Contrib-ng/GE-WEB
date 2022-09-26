@@ -1,6 +1,5 @@
 import React from 'react'
-import ClientAccountPage from '../components/accountpage/ClientAccountPage'
-import { ExpertNavigation } from '../components/navigations/ExpertNavigation'
+import { ClientNavigation, ExpertNavigation } from '../components/navigations/AccountNavigation'
 
 const ExpertAccount = () => {
   return (
@@ -12,8 +11,8 @@ const ExpertAccount = () => {
 
 const ClientAccount = () => {
   return (
-    <div className="ClientAccountPage_Body">
-      <ClientAccountPage />
+    <div className="ClientAccount_Body">
+      <ClientNavigation />
     </div>
   )
 }
