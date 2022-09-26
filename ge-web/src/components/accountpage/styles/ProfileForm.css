@@ -158,12 +158,12 @@
     .ProfileForm_Body .Form .ProfileForm_Name,
     .ProfileForm_Body .Form .ProfileForm_Number_Email {
         flex-direction: column;
-        width: 250px;
+        width: 240px;
     }
     .ProfileForm_Body .Form .ProfileForm_Name [type = "name"],
     .ProfileForm_Body .Form .ProfileForm_Number_Email [type = "number"],
     .ProfileForm_Body .Form .ProfileForm_Number_Email [type = "email"] {
-        width: 250px !important;
+        width: 240px !important;
     }
     .ProfileForm_Body .Form .ProfileForm_Name .Name,
     .ProfileForm_Body .Form .ProfileForm_Number_Email .Number_Email,
@@ -171,6 +171,9 @@
     .ProfileForm_Body .Form .CVupload {
         font-size: 14px;
     }  
+    .ProfileForm_Body .Form .Textarea{
+        width: 84%;
+    }
     .ProfileForm_Body .Form [type="file"] {
         width: 94%;
     }
@@ -181,17 +184,17 @@
 
 @media only screen and (max-width: 320px) {
     .ProfileForm_Body {
-        width: 75vw;
+        width: 73vw;
     }
     .ProfileForm_Body .Form .ProfileForm_Name,
     .ProfileForm_Body .Form .ProfileForm_Number_Email {
         flex-direction: column;
-        width: 210px;
+        width: 205px;
     }
     .ProfileForm_Body .Form .ProfileForm_Name [type = "name"],
     .ProfileForm_Body .Form .ProfileForm_Number_Email [type = "number"],
     .ProfileForm_Body .Form .ProfileForm_Number_Email [type = "email"] {
-        width: 210px !important;
+        width: 205px !important;
     }
     .ProfileForm_Body .Form .ProfileForm_Name .Name,
     .ProfileForm_Body .Form .ProfileForm_Number_Email .Number_Email,
