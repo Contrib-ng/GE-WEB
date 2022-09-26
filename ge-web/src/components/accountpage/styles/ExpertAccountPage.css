@@ -1,6 +1,6 @@
 .Body{
     width: 100vw;
-    /* animation: opacity 2s; */
+    animation: opacity 2s;
 }
 .Body_Components{
     margin: 20px 0 10px 0;
