@@ -1,18 +1,11 @@
-# GE-WEB
+# Getting Started with ge-web
 
-WEB VERSION OF THE PRODUCT
+This product is built with [Create React App](https://github.com/facebook/create-react-app). by the development team of the company
 
-## PROGRAM USED FOR WEB DEVELOPMENT
+## Available Scripts
 
-REACTJS, NPM, NODE, EXPRESS,
+In the project directory, they are no scripts
 
-The live preview is hosted on netlify at
-<https://gecweb.netlify.app>
+### Deployment
 
-## To run program on local host
-
-npm start
-
-## Reprogrammed the build command to sequentially run a netlify production
-
-npm run build-netlify
+Deployments are done by the npm scripts on build, the product is deployed into Netlify at [https://app.netlify.com/sites/gecweb/overview](https://app.netlify.com/sites/gecweb/overview) and production is made at [https://gecweb.netlify.app](https://gecweb.netlify.app)

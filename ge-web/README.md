@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### `npm run netlify`
+
+This command runs the netlify script to produce the netlify prototype of the project build
+
+### `npm run build-netlify`
+
+This command runs a build production of the product then the netlify script to produce the netlify prototype of the project build and host it on the production site [https://gecweb.netlify.app](https://gecweb.netlify.app)
