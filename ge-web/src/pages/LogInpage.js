@@ -9,7 +9,7 @@ const LogInpage = () => {
   return (
    <ModalContextProvider>
      <div className='LogInpage_Body' style={{ height: '100vh'}}>
-     <Logo classname="PrimaryHeader_Logo"/>
+     <Logo />
     <div className="LogInPage_Form">
     <LogInForm />
     </div>

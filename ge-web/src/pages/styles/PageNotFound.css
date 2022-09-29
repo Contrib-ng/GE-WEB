@@ -1,0 +1,40 @@
+ .Components .PageNot_Found{
+    text-align: center;
+    overflow: hidden;
+}
+ .Components .PageNot_Found img {
+    width: 40%;
+    height: 40vw;
+}
+
+ .Components .PageNot_Found h1 {
+    color: #fb5712;
+    font-size: 60px;
+    margin-top: -30px;
+}
+
+@media only screen and (max-width: 769px) {
+     .Components .PageNot_Found h1 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 436px) {
+     .Components .PageNot_Found img {
+        width: 70vw;
+        height: 100vw;
+    }
+     .Components .PageNot_Found h1 {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+     .Components .PageNot_Found img {
+        width: 70vw;
+        height: 100vw;
+    }
+     .Components .PageNot_Found h1 {
+        font-size: 30px;
+    }
+}

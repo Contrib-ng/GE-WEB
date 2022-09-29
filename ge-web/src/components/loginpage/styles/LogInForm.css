@@ -1,6 +1,6 @@
-.LogInForm_Body .Form {
+.LogInForm_Body  {
     width: 100%;
-    padding: 20px;
+    padding: 30px;
     background: rgba( 255, 255, 255, 0.1 );
     box-shadow: 0 2px 8px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 50px );
@@ -13,25 +13,11 @@
 .LogInForm_Body .Form h1 {
     font-size: 34px;
     color: #0057C2;
-    text-align: center;
 }
 
 .LogInForm_Body .Form p {
     font-size: 18px;
     color: #0057C2;
-    text-align: center;
-}
-
-.Form .IconBack{
-    display: none;
-    align-self: flex-start;
-    margin-left: -10px;
-    width: 20px;
-    margin-top: -20px;
-}
-
-.Form a {
-    width: 20px;
 }
 
 .Form .error {
@@ -73,13 +59,12 @@
     height: 34px;
     color: white;
     cursor: pointer;
-    margin: 20px 0 20px 20px;
+    margin: 20px 0;
 }
 
 .Form .OtherLoginMethod {
     margin-top: 20px;
-    width: 320px;
-    margin-left: 30px;
+    width: 100%;
 }
 
 .Form .OtherLoginMethod .OtherLoginMethod_Google {
@@ -137,35 +122,40 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .LogInForm_Body .Form h1 {
+    .LogInForm_Body h1 {
         font-size: 30px;
     }
-    .LogInForm_Body .Form p {
+    .LogInForm_Body p {
         font-size: 14px;
     }
 }
 
-@media only screen and (max-width: 426px) {
-    .Form .IconBack {
-        display: flex;
-        margin-top: 10px;
+/* @media only screen and (max-width: 426px) {
+    .LogInForm_Body {
+        width: 100%;
     }
-    .LogInForm_Body .Form {
-        margin-left: -20px;
-    }
-}
+} */
 
-@media only screen and (max-width: 421px) {
-    .LogInForm_Body .Form {
+@media only screen and (max-width: 427px) {
+    .LogInForm_Body {
+        width: 325px !important;
         margin-left: 0;
         box-shadow: none;
         border: 0;
         background: none;
         border-radius: 0;
-        padding: 0;
+        padding: 10px;
         backdrop-filter: blur(0);
     }
 }
+
+@media only screen and (max-width: 376px) {
+    .LogInForm_Body {
+        width: 320px !important;
+        padding: 30px;
+    }
+}
+
 
 @media only screen and (max-width: 341px) {
     .Form .Email,

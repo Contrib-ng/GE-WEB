@@ -6,7 +6,7 @@ const PageInProduction = () => {
     <div className='Body'>
     <div className="Body_Components">
    <div className="Production_Page">
-   <img src="images/production.png" alt="" srcset="" />
+   <img src="images/production.png" alt="" srcSet="" />
     <h1> Page in Production</h1>
    </div>
     </div>

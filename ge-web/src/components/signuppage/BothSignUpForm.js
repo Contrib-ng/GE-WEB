@@ -8,6 +8,7 @@ import { Button, Form } from 'react-bootstrap'
 import './styles/BothSignUpForm.css'
 import * as Yup from 'yup'
 import { ModalContext } from '../homepage/States'
+import { useNavigate } from 'react-router'
 
 const BothSignUpSchema = Yup.object().shape({
   firstName: Yup.string().required(),
@@ -17,6 +18,7 @@ const BothSignUpSchema = Yup.object().shape({
 })
 
 const BothSignUpForm = () => {
+  const navigate = useNavigate()
   const context = useContext(ModalContext)
   const { showPassword, setShowPassword } = context
   return (
@@ -139,9 +141,8 @@ const BothSignUpForm = () => {
             <Icon icon='logos:apple' className="IconApple"/>
           </div>
           <Divider color='rgba(159, 159, 159, 0.5)' style={{ marginTop: '20px'}}> </Divider>
-          <h4> Already have an account? <em>
-            <a href="/log-in" style={{ textDecoration: 'none', color: '#fb5012'}}> Log in</a>
-          </em></h4>
+          <h4> Already have an account? <em style={{ textDecoration: 'none', color: '#fb5012', cursor: 'pointer'}} 
+          onClick={() => navigate('/login')}>Log in</em></h4>
         </div>
       )}
     </Formik>      

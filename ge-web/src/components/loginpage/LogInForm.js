@@ -9,6 +9,10 @@ import { faLock, faLockOpen, faEnvelope } from '@fortawesome/free-solid-svg-icon
 import * as Yup from 'yup'
 import { ModalContext } from '../homepage/States'
 import SignUpModal from '../homepage/SignUpModal'
+import { signInWithEmailAndPassword } from 'firebase/auth'
+import { auth } from '../../Firebase'
+import { useNavigate } from 'react-router'
+import { RefreshPage } from '../../Navigation'
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -19,10 +23,27 @@ const LogInSchema = Yup.object().shape({
 const LogInForm = () => {
   const context = useContext(ModalContext)
   const { setModalOpen, showPassword, setShowPassword } = context
+  const navigate = useNavigate()
+  const OnLogIn = async(email, password) => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        navigate('/expert')
+        RefreshPage()
+      })
+    } catch (error) {
+      console.log(error.message)
+      error.message === "Firebase: Error (auth/user-not-found)." &&
+      alert("User not existing")
+      error.message === "Firebase: Error (auth/wrong-password)." &&
+      alert("Invalid Email/Password")
+    }
+  }
 
   function openModal(){
     setModalOpen(true)
   }
+
   return (
     <div className="LogInForm_Body">
     <SignUpModal />
@@ -32,7 +53,7 @@ const LogInForm = () => {
       validateOnMount={true}
       onSubmit={async (values) => {
         await sleep(500)
-        console.log(values.email, values.password, values.toggle)
+       OnLogIn(values.email, values.password)
         }}
       >
         {({handleChange, handleBlur, handleSubmit, values, isValid, errors}) => (

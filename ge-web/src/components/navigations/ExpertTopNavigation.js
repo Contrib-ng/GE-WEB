@@ -3,9 +3,24 @@ import { Nav, Navbar } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faRightFromBracket, faEnvelope, faBell} from '@fortawesome/free-solid-svg-icons'
 import './styles/ExpertTopNavigation.css'
+import { signOut } from 'firebase/auth'
+import { auth } from '../../Firebase'
+import { RefreshPage } from '../../Navigation'
+import { useNavigate } from 'react-router'
 
 
 const ExpertTopNavigation = () => {
+  const navigate = useNavigate()
+
+  const SignOut = () => {
+    signOut(auth).then(() => {
+    navigate('/')
+    RefreshPage()
+    }
+    ).catch(error => {
+      console.log(error.message)
+    })
+  }
   return (
     <Navbar className= 'Navbar'>
         <Nav className='ThisNav'>
@@ -18,7 +33,8 @@ const ExpertTopNavigation = () => {
         <Nav className="ExpertTopNavigation_Icons">
             <FontAwesomeIcon icon={faBell} color='#fb5012' className='TheIcon' />
             <FontAwesomeIcon icon={faEnvelope} color='#fb5012' className='TheIcon' />
-            <FontAwesomeIcon icon={faRightFromBracket} color='#fb5012' className='TheIcon' />
+            <FontAwesomeIcon icon={faRightFromBracket} color='#fb5012' className='TheIcon' onClick={SignOut}
+            />
         </Nav>
     </Navbar>
   )

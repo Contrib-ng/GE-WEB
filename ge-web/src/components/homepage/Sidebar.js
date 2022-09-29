@@ -14,16 +14,16 @@ export const HamburgerMenu = () => {
         crossClassName={'cross'}
         >
         <div className='PrimaryHeader_Logo'>
-        <img src='images/3.png' alt='LOGO'/>
+        <img src='images/3.png' alt='LOGO' />
         </div>
-            <a href="/" className="Menu_Item">
-            Skill</a>
-            <a href="/" className="Menu_Item">
-            Expert</a>
-            <a href="/" className="Menu_Item">
-            Why Us?</a>
-            <a href="/" className="Menu_Item">
-            About us</a>
+            <div href="/" className="Menu_Item">
+            Skill</div>
+            <div href="/" className="Menu_Item">
+            Expert</div>
+            <div href="/" className="Menu_Item">
+            Why Us?</div>
+            <div href="/" className="Menu_Item">
+            About us</div>
         </Menu>
     )
 }

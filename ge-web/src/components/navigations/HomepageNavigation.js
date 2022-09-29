@@ -33,7 +33,7 @@ const HomepageNavigation = () => {
             <Nav.Link href='/'  className='Links'>About us</Nav.Link>
         </Nav>
         <div className="Buttons">
-        <Button className='PrimaryHeader_Links_Log_In' href='/log-in'>
+        <Button className='PrimaryHeader_Links_Log_In' href='/login'>
             LOG IN
          </Button>
         <Button className='PrimaryHeader_Links_Sign_Up' onClick={OpenModal}>
