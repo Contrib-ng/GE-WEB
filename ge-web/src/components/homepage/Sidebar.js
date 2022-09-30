@@ -16,13 +16,13 @@ export const HamburgerMenu = () => {
         <div className='PrimaryHeader_Logo'>
         <img src='images/3.png' alt='LOGO' />
         </div>
-            <div href="/" className="Menu_Item">
+            <div className="Menu_Item">
             Skill</div>
-            <div href="/" className="Menu_Item">
+            <div className="Menu_Item">
             Expert</div>
-            <div href="/" className="Menu_Item">
+            <div className="Menu_Item">
             Why Us?</div>
-            <div href="/" className="Menu_Item">
+            <div className="Menu_Item">
             About us</div>
         </Menu>
     )

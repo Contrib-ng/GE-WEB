@@ -46,7 +46,7 @@
 .Continue{
     align-self: center;
     width: 100%;
-    height: 20px;
+    height: 100%;
     border: 1px solid #0057C2;
     border-radius: 20px;
     background-color: rgba(0, 87, 194, 10%);

@@ -16,6 +16,8 @@
     font-size: 14px;
     margin: 21px 5px;
     color: #0057C2;
+    width: fit-content;
+    word-wrap: none !important;
 }
 
 .SecondaryHeader_All_Categories{
@@ -44,7 +46,7 @@
 @media only screen and (max-width: 768px) {
     .SecondaryHeader_Jobs{
         font-size: 10px;
-        margin: 24px 5px;
+        margin: 24px 10px;
     }
     .SecondaryHeader_All_Categories Button {
         font-size: 10px;
@@ -58,7 +60,7 @@
 @media only screen and (max-width: 426px) {
     .SecondaryHeader_Jobs{
         font-size: 9px;
-        margin: 24px 5px;
+        margin: 24px 10px;
     }
 }
 

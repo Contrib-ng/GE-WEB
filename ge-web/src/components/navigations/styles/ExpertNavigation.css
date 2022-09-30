@@ -86,7 +86,7 @@
     }
     .ProfileInformation .Information h2,
     .ProfileInformation .Information p,
-    .ProfileInformation .Information em{
+    .ProfileInformation .Information img{
         display: none;
     }  
     .ExpertSideNavigation,

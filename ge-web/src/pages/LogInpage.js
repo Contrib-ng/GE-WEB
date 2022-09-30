@@ -2,7 +2,7 @@ import React from 'react'
 import LogInForm from '../components/loginpage/LogInForm'
 import './styles/LogInpage.css'
 import { Logo } from '../components/homepage/PrimaryHeader'
-import ModalContextProvider from '../components/homepage/States'
+import ModalContextProvider from '../States'
 
 
 const LogInpage = () => {

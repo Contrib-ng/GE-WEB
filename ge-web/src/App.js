@@ -1,6 +1,6 @@
 import './App.css';
 import AuthNavigation from './AuthNavigation';
-import ModalContextProvider  from './components/homepage/States';
+import ModalContextProvider  from './States';
 
 function App() {
   return (

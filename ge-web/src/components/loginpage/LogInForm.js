@@ -7,7 +7,7 @@ import { Icon } from '@iconify/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock, faLockOpen, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import * as Yup from 'yup'
-import { ModalContext } from '../homepage/States'
+import { ModalContext } from '../../States'
 import SignUpModal from '../homepage/SignUpModal'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../../Firebase'
@@ -32,7 +32,6 @@ const LogInForm = () => {
         RefreshPage()
       })
     } catch (error) {
-      console.log(error.message)
       error.message === "Firebase: Error (auth/user-not-found)." &&
       alert("User not existing")
       error.message === "Firebase: Error (auth/wrong-password)." &&
@@ -75,7 +74,7 @@ const LogInForm = () => {
                 className="Email"
               />
               <FontAwesomeIcon icon={faEnvelope} 
-                style={{ marginLeft: '-30px', color: '#FB5012'}} />
+                style={{ marginLeft: '-40px', color: '#FB5012'}} />
             </Form.Group>
             <Form.Group>
               <Form.Control 
@@ -90,17 +89,14 @@ const LogInForm = () => {
                 className="Password"
                 onBlur={handleBlur('password')}
               />
-              {
-                showPassword === false
-                ? <FontAwesomeIcon icon={faLock} 
-                style={{ marginLeft: '-30px', color: '#FB5012'}}
+                 <FontAwesomeIcon icon={
+                  showPassword === false
+                  ? faLock
+                  : faLockOpen
+                 } 
+                style={{ marginLeft: '-40px', color: '#FB5012'}}
                     onClick={() => {setShowPassword(!showPassword)}}
                 />
-                : <FontAwesomeIcon icon={faLockOpen} 
-                style={{ marginLeft: '-30px', color: '#FB5012'}}
-                onClick={() => {setShowPassword(!showPassword)}}
-                />
-              }
             </Form.Group>
             <div className="RememberMe_ForgotPassword">
                 <Form.Check type='checkbox' name='toggle' 

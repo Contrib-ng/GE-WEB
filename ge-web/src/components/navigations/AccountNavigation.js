@@ -1,22 +1,32 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Nav } from 'react-bootstrap'
-import { CLIENTNAVIGATION, EXPERTNAVIGATION, PLACEHOLDER_IMG } from './SideNavigationParameters'
+import { ModalContext } from '../../States'
+import { CLIENTNAVIGATION, EXPERTNAVIGATION, PLACEHOLDER_IMG, VERIFIED_BADGE } from './SideNavigationParameters'
 import './styles/ExpertNavigation.css'
 
 
 const ExpertNavigation = () => {
     const [active, setActive] = useState('dashboard')
+    const context = useContext(ModalContext)
+    const { currentLoggedInUser } = context
     return(
         <div className="ExpertNavigation_Body">
         <div className="ExpertSideNavigation">
         <div className="ProfileInformation" style={{
              position: 'fixed',
              }}>
-          <img src={PLACEHOLDER_IMG} alt="" srcSet="" />
+          <img src={
+          currentLoggedInUser.profilePicture === ''
+          ? PLACEHOLDER_IMG
+          : currentLoggedInUser.profilePicture
+          } alt="" srcSet=''  onClick={() => setActive('profile')} />
           <div className="Information">
-              <h2>Afolabi Nuel</h2>
-              <p> Product Designer</p>
-              <em> Expert </em>
+            <h2>{currentLoggedInUser.firstName}</h2>
+              <p>{currentLoggedInUser.majorSkill}</p>
+              {
+                  currentLoggedInUser.verification
+                  && <img style={{width: '20px', height: '20px'}} src={VERIFIED_BADGE} alt='' srcSet=''/>
+                }
           </div>
       </div>
         <Nav variant='tabs'

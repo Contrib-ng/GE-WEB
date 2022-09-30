@@ -7,7 +7,7 @@ import React, { useContext } from 'react'
 import { Button, Form } from 'react-bootstrap'
 import './styles/BothSignUpForm.css'
 import * as Yup from 'yup'
-import { ModalContext } from '../homepage/States'
+import { ModalContext } from '../../States'
 import { useNavigate } from 'react-router'
 
 const BothSignUpSchema = Yup.object().shape({
@@ -63,7 +63,6 @@ const BothSignUpForm = () => {
             ? 'Invalid Email'
             : ''
             }</div>
-            {console.log(errors.password)}
           <Form.Group>
             <Form.Control 
               type='email'

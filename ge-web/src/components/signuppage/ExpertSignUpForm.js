@@ -4,15 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Icon } from '@iconify/react'
 import { Divider } from '@mui/material'
 import { Formik } from 'formik'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Button, Form } from 'react-bootstrap'
 import './styles/ExpertSignUpForm.css'
 import * as Yup from 'yup'
-import { ModalContext } from '../homepage/States'
+import { ModalContext } from '../../States'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
-import { auth, userCollectionRef } from '../../Firebase'
+import { auth, expertUserCollectionRef } from '../../Firebase'
 import { doc, setDoc } from 'firebase/firestore'
 import { RefreshPage } from '../../Navigation'
+import { PLACEHOLDER_IMG } from '../navigations/SideNavigationParameters'
 
 const ExpertSignUpSchema = Yup.object().shape({
   firstName: Yup.string().required(),
@@ -26,16 +27,24 @@ const ExpertSignUpSchema = Yup.object().shape({
 const ExpertSignUpForm = () => {
   const navigate = useNavigate()
   const context = useContext(ModalContext)
-  const { showPassword, setShowPassword } = context
-
+  const { showPassword, setShowPassword, tag, setTag } = context
+  useEffect(() => {
+    setTag('Expert')
+  },[setTag])
   const OnSignUp = async(email, password, firstName, lastName) => {
     try {
       const authUser = await createUserWithEmailAndPassword( auth, email, password)
       await setDoc(
-        doc(userCollectionRef, authUser.user.email),{
+        doc(expertUserCollectionRef, authUser.user.email),{
+          firstName: firstName,
+          lastName: lastName,
           user_uid: authUser.user.uid,
-          username: firstName+lastName,
-          email: authUser.user.email
+          userName: firstName+lastName,
+          email: authUser.user.email,
+          tag: tag,
+          profilePicture: PLACEHOLDER_IMG,
+          verification: false,
+          majorSkill: 'Software Engineer',
         }
       ).then(() => {
       navigate('/expert')
@@ -43,7 +52,6 @@ const ExpertSignUpForm = () => {
       }
       )
     } catch (error) {
-      console.log(error.message)
       error.message === "Firebase: Error (auth/email-already-in-use)." &&
       alert("Email is already in use")
     }

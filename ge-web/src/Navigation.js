@@ -2,7 +2,7 @@ import React from 'react';
 import Homepage from './pages/Homepage';
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import LogInpage from './pages/LogInpage';
-import ModalContextProvider  from './components/homepage/States';
+import ModalContextProvider  from './States';
 import { BothSignUppage, ClientSignUppage, ExpertSignUppage } from './pages/SignUppage';
 import { ClientAccount, ExpertAccount } from './pages/Accountpage';
 import PageNotFound from './pages/PageNotFound';

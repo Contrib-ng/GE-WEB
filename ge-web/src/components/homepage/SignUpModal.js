@@ -3,14 +3,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button } from 'react-bootstrap'
 import {faUser, faArrowsDownToPeople, faMercury} from '@fortawesome/free-solid-svg-icons'
 import Modal from 'react-modal' 
-import ModalContextProvider, { ModalContext } from './States'
+import ModalContextProvider, { ModalContext } from '../../States'
+import { useNavigate } from 'react-router'
 
 export const SignUpModal = () => { 
     const context = useContext(ModalContext)
-    const { selectedSignUp, setSelectedSignUp, modalOpen, setModalOpen} = context
+    const { tag, setTag, modalOpen, setModalOpen } = context
+    const navigate = useNavigate()
     function closeModal() {
         setModalOpen(false)
-        setSelectedSignUp('')
+        setTag('')
     }
     const modalStyles = {
       overlay: {
@@ -45,22 +47,22 @@ export const SignUpModal = () => {
   }
     
     function ButtonText(){
-      if (selectedSignUp === 'Client'){
+      if (tag === 'Client'){
         return "Join as a client"
-      } else if (selectedSignUp === 'Expert'){
+      } else if (tag === 'Expert'){
         return "Apply as an expert"
-      } else if (selectedSignUp === 'Both'){
+      } else if (tag === 'Both'){
         return "Be both"
       }
     }
 
     function ButtonLink(){
-      if (selectedSignUp === 'Client'){
-        return '/client-signup'
-      } else if (selectedSignUp === 'Expert'){
-        return '/expert-signup'
-      } else if (selectedSignUp === 'Both'){
-        return '/both-signup'
+      if (tag === 'Client'){
+        navigate('/client-signup')
+      } else if (tag === 'Expert'){
+        navigate('/expert-signup')
+      } else if (tag === 'Both'){
+        navigate('/both-signup')
       }
     }
   return (
@@ -78,32 +80,32 @@ export const SignUpModal = () => {
       <p style={{ fontSize: '8px'}}> Start your journey of utilization of skills and opportunities </p>
       <div className="Modal_Content">
       <div className={
-        selectedSignUp === 'Client'
+        tag === 'Client'
         ? 'Selected'
         : 'Modal_Expert'
-      } onClick={() => setSelectedSignUp('Client')}>
+      } onClick={() => setTag('Client')}>
       <FontAwesomeIcon icon={faUser} className='Icon'/>     
         Be the client, Hire for projects
       </div>
       <div className={
-        selectedSignUp === 'Expert'
+        tag === 'Expert'
         ? 'Selected'
         : 'Modal_Expert'
-      } onClick={() => setSelectedSignUp('Expert')}>
+      } onClick={() => setTag('Expert')}>
       <FontAwesomeIcon icon={faArrowsDownToPeople} className='Icon'/>     
         Be the expert, Find your job
       </div>
       <div className={
-        selectedSignUp === 'Both'
+        tag === 'Both'
         ? 'Selected'
         : 'Modal_Expert'
-      } onClick={() => setSelectedSignUp('Both')}>
+      } onClick={() => setTag('Both')}>
       <FontAwesomeIcon icon={faMercury} className='Icon'/>     
         You can be both, Hire and work
       </div>
       {
-        selectedSignUp !== ''
-        && <Button className="Continue" href={ButtonLink()}
+        tag !== ''
+        && <Button className="Continue" onClick={ButtonLink}
       >
         {
           ButtonText()

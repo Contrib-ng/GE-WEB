@@ -1,48 +1,12 @@
 import React from 'react'
 import './styles/SecondaryHeader.css'
-import {Button} from 'react-bootstrap'
-
-const Jobs = [
-    {
-        name: 'Domestic chore'
-    },
-    {
-        name: 'Web Development'
-    },
-    {
-        name: 'Copy-Writing'
-    },
-    {
-        name: 'Voice over'
-    },
-    {
-        name: 'Design'
-    },
-    {
-        name: 'Mobile Development'
-    },
-    {
-        name: 'Contract'
-    },
-    {
-        name: 'Finance Manager'
-    }
-]
+import { JOBS } from '../../Data';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 const SecondaryHeader = () => {
     function SecondaryHeaderJobs() {
-        if (window.innerWidth > 768)
-        return Jobs.map(job => {
-            return <h2 className='SecondaryHeader_Jobs' key={job.name}>
-                {job.name}
-            </h2>
-        }); else if (window.innerWidth <= 768 && window.innerWidth >= 427)
-        return Jobs.slice(0,-1).map(job => {
-            return <h2 className='SecondaryHeader_Jobs' key={job.name}>
-                {job.name}
-            </h2>
-        }); else if (window.innerWidth <= 425)
-        return Jobs.slice(0,-3).map(job => {
+        return JOBS.map(job => {
             return <h2 className='SecondaryHeader_Jobs' key={job.name}>
                 {job.name}
             </h2>
@@ -50,19 +14,13 @@ const SecondaryHeader = () => {
     }
   return (
     <div className='SecondaryHeader_Body'>
-        <div className='SecondaryHeader_Body_Jobs'>
+        <div className='SecondaryHeader_Body_Jobs' style={{ overflowX: 'scroll', width: '1000px', whiteSpace: 'nowrap'}}>
         {
          SecondaryHeaderJobs()
         }
         </div>
         <div className="SecondaryHeader_All_Categories">
-            <Button type='button'>
-                {
-                    window.innerWidth <= 683
-                    ? 'MORE'
-                    : 'ALL CATEGORIES'
-                }
-            </Button>
+        <FontAwesomeIcon icon={faCaretRight} color="#0057c2" size='lg' />
         </div>
     </div>
   )
