@@ -1,7 +1,7 @@
 .ProfileForm_Body {
     margin-top: 20px;
     width: 80vw;
-    overflow-x: hidden;
+    overflow-x: scroll;
 }
 
 .ProfileForm_Body .Form .ProfileForm_Name,

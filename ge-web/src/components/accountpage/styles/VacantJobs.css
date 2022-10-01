@@ -120,8 +120,7 @@
     .VacantJobs_Body .VacantJob_Card {
         width: 190px;
         margin: 0 2px 20px 1px !important;
-        height: 210px;
-        overflow: scroll;
+        height: 220px;
         padding: 11px;
     }
     .VacantJob_Card h1 {

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Nav } from 'react-bootstrap'
+import { Nav, Tab, Tabs } from 'react-bootstrap'
 import { ModalContext } from '../../States'
 import { CLIENTNAVIGATION, EXPERTNAVIGATION, PLACEHOLDER_IMG, VERIFIED_BADGE } from './SideNavigationParameters'
 import './styles/ExpertNavigation.css'
@@ -29,43 +29,45 @@ const ExpertNavigation = () => {
                 }
           </div>
       </div>
-        <Nav variant='tabs'
-        onSelect={(selectedKey) => setActive(selectedKey)}
+        <Tabs
+        id='Navigation'
+        transition
         style={{ 
-            display: 'flex', flexDirection:'column', paddingLeft: '10px',
-            gap: '20px', marginTop: '100px',
-            }} className='Navigation'>
+            display: 'flex', flexDirection:'column',  marginTop: '100px'
+            }}>
                 {
                     EXPERTNAVIGATION.map( navigation => {
                         return (
-                        <Nav.Link eventKey={navigation.index} key={navigation.index}
+                        <Tab eventKey={navigation.index} key={navigation.index}
                         className={
                             active === navigation.index
                             ? "Nav_Link_Active"
                             : "Nav_Link_Inactive"
                         }
+                        title={navigation.index}
                         >
-                        <div className="Navigation_Container"
+                        <div id="Navigation_Container"
                          style={{ 
-                            position: 'fixed', display: 'flex',
+                            position: 'fixed', display: 'flex', gap: '5px',
                             }}
+                            onClick={() => setActive(navigation.index)}
                         >
                         {
                             active === navigation.index
-                            ? <img src={navigation.activeImage} alt="" srcSet="" className="Icons" />
-                            : <img src={navigation.inactiveImage} alt="" srcSet="" className="Icons" />
+                            ? <img src={navigation.activeImage} alt="" srcSet="" id="Icons" />
+                            : <img src={navigation.inactiveImage} alt="" srcSet="" id="Icons" />
                         }
-                        <p>{navigation.navigationName}</p>
+                        <p className='Nav_Name'>{navigation.navigationName}</p>
                         </div>
                         {
                             active === navigation.index
                             && navigation.link
                         }
-                        </Nav.Link>
+                        </Tab>
                         )
                     })
                 }
-            </Nav>
+            </Tabs>
             </div>
         </div>
     )

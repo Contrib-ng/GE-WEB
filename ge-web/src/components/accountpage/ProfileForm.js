@@ -1,5 +1,5 @@
 import { Formik } from 'formik'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Form, Button } from 'react-bootstrap'
 import './styles/ProfileForm.css'
 import * as Yup from 'yup'
@@ -14,12 +14,31 @@ const UpdateSchema = Yup.object().shape({
     email: Yup.string().email('Invalid Email'),
     phoneNumber: Yup.number().min(11, 'Error').max(11, 'Error'),
     aboutMe: Yup.string().max(500, 'Character limit reached'),
-    resumeCV: Yup.mixed()
+    file: Yup.mixed()
 })
 
 const ProfileForm = () => {   
     const context = useContext(ModalContext)
     const { currentLoggedInUser } = context
+    const [state, setState] = useState({ file: null})
+    const Thumb = (file) => {
+        function checkForFile(){
+            if(state.file === null){return;}
+            else {
+                setState(() => {
+                    let reader = new FileReader()
+                    reader.onloadend = () => {
+                        setState({file: reader.result})
+                    }
+                    reader.readAsDataURL(file)
+                })
+            }
+        }
+        useEffect(() => {
+            checkForFile()
+        })
+    }
+
     const uploadUpdateToFirebase = (firstName, lastName) => {
         updateDoc( doc(db, 'ExpertUsers', auth.currentUser.email), {
                 firstName: firstName,
@@ -35,12 +54,12 @@ const ProfileForm = () => {
     <Formik
     validationSchema={UpdateSchema}
     validateOnMount
-    initialValues={{ firstName: '', lastName: '', phoneNumber: '', aboutMe: ''}}
+    initialValues={{ firstName: '', lastName: '', phoneNumber: '', aboutMe: '', file: null}}
     onSubmit={values => uploadUpdateToFirebase(
         values.firstName, values.lastName
     )}
     >
-         {({handleBlur, handleChange, values, isValid, handleSubmit, errors}) => (
+         {({handleBlur, handleChange, values, setFieldValue, handleSubmit, errors}) => (
             <div className="Form">
             <div className="ProfileForm_Name">
             <Form.Group style={{ display: 'flex', flexDirection: 'column'}}>
@@ -83,10 +102,14 @@ const ProfileForm = () => {
                 ></Form.Control>
             </Form.Group>
             <Form.Group style={{ display: 'flex', flexDirection: 'column'}}>
-                <Form.Label className='CVupload'> Upload CV / Resume</Form.Label>
-                <Form.Control type="file"
-                value={values.resumeCV}
-                onChange={handleChange('resumeCV')}></Form.Control>
+                <label htmlFor='file' className='CVupload'>Upload CV / Resume</label>
+                <input type="file" id="file" name="file"
+                onChange={
+                    (event) => {
+                        setFieldValue("file", event.currentTarget.files[0])
+                    }
+                } />
+                <Thumb file={values.file} />
             </Form.Group>
             <div className='Form_Submit'>
             <Button type='submit' onClick={handleSubmit}> Update</Button>
