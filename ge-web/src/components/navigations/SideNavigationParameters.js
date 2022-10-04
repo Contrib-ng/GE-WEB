@@ -1,5 +1,5 @@
 import PageInProduction from "../../pages/PageInProduction"
-import { ExpertDashboard, ExpertProfile } from "../accountpage/ExpertAccountPage"
+import { ExpertDashboard, ExpertProfile, ExpertSettings } from "../accountpage/ExpertAccountPage"
 
 export const PLACEHOLDER_IMG = 'https://cdn-icons-png.flaticon.com/512/1144/1144760.png'
 export const VERIFIED_BADGE = 'https://img.icons8.com/color/344/verified-badge.png'
@@ -53,7 +53,7 @@ export const EXPERTNAVIGATION = [
         inactiveImage: 'https://img.icons8.com/external-line-adri-ansyah/2x/external-social-social-media-interface-line-adri-ansyah-31.png',
         activeImage: 'https://img.icons8.com/external-line-adri-ansyah/2x/fb5012/external-social-social-media-interface-line-adri-ansyah-31.png',
         navigationName: 'Settings',
-        link: <PageInProduction />
+        link: <ExpertSettings />
     },
 ]
 
