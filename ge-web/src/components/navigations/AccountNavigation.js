@@ -8,11 +8,14 @@ import './styles/ExpertNavigation.css'
 const ExpertNavigation = () => {
     const [active, setActive] = useState('dashboard')
     const context = useContext(ModalContext)
-    const { currentLoggedInUser } = context
+    const { currentLoggedInUser, offline } = context
     return(
         <div className="ExpertNavigation_Body">
         <div className="ExpertSideNavigation">
-        <div className="ProfileInformation" style={{
+        {
+            offline
+            ? offline
+            : <div className="ProfileInformation" style={{
              position: 'fixed',
              }}>
           <img src={
@@ -22,13 +25,14 @@ const ExpertNavigation = () => {
           } alt="" srcSet=''  onClick={() => setActive('profile')} />
           <div className="Information">
             <h2>{currentLoggedInUser.firstName}</h2>
-              <p>{currentLoggedInUser.majorSkill}</p>
+            <p>{currentLoggedInUser.majorSkill}</p>
               {
                   currentLoggedInUser.verification
                   && <img style={{width: '20px', height: '20px'}} src={VERIFIED_BADGE} alt='' srcSet=''/>
                 }
           </div>
       </div>
+        }
         <Tabs
         id='Navigation'
         transition

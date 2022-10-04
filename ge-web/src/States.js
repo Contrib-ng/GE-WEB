@@ -8,11 +8,12 @@ const ModalContextProvider = ({ children }) => {
     const [showPassword, setShowPassword] = useState(false)
     const [more, setMore] = useState(10)
     const [currentLoggedInUser, setCurrentLogInUser] = useState([])
+    const [offline, setOffline] = useState('')
 
     return (
         <ModalContext.Provider value={{
             tag, setTag, modalOpen, setModalOpen, showPassword, setShowPassword,
-            more, setMore, currentLoggedInUser, setCurrentLogInUser
+            more, setMore, currentLoggedInUser, setCurrentLogInUser, offline, setOffline
              }}>
         {children}
         </ModalContext.Provider>

@@ -1,6 +1,6 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Button, Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap'
 import { Logo } from '../homepage/PrimaryHeader'
 import { HamburgerMenu } from '../homepage/Sidebar'
@@ -13,25 +13,24 @@ import { doc, getDoc, limit } from 'firebase/firestore'
 const HomepageNavigation = () => {
     const context = useContext(ModalContext)
     const [image, setImage] = useState([])
-    const { setModalOpen } = context
+    const { setModalOpen, setOffline, offline } = context
     const navigate = useNavigate()
-    const getExpertUser = async() => {
-      const user = auth.currentUser
-      await getDoc(doc(db, 'ExpertUsers', user.email), limit(1)).then(
+    const user =  auth.currentUser
+    user &&
+       getDoc(doc(db, 'ExpertUsers', user.email), limit(1)).then(
         doc => {
           if (doc.exists()){
             setImage({
               profilePicture: doc.data().profilePicture,
-              tag: doc.data().tag
+              tag: doc.data().tag,
+              email: doc.data().email
           })
           }
         }
+      ).then(() => {})
+      .catch((error) =>
+        setOffline(error.message)
       )
-  }
-  
-  useEffect(() => {
-    getExpertUser()
-  })
   
     function OpenModal() {
       setModalOpen(true)
@@ -56,7 +55,18 @@ const HomepageNavigation = () => {
             <Nav.Link className='Links'>About us</Nav.Link>
         </Nav>
         {
-          auth.currentUser
+          offline === 'Failed to get document because the client is offline.'
+          ? <div style={{
+            marginRight: '20px', marginTop: '5px', color: 'red', display: 'flex'
+          }}>
+            <div style={{
+            width: '10px', height: '10px', backgroundColor: 'red', 
+            marginTop: '5px', marginRight: '2px',
+            borderRadius: '5px'
+            }}></div>
+                Offline
+            </div>
+          : auth.currentUser
           ? <img src={
           image.profilePicture === ''
           ? PLACEHOLDER_IMG

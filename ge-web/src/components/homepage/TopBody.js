@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './styles/TopBody.css'
 import {Button} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faArrowUpRightFromSquare} from '@fortawesome/free-solid-svg-icons'
 import {Icon} from '@iconify/react'
+import { ModalContext } from '../../States'
 
 const TopBody = () => {
+  const context = useContext(ModalContext)
+  const { setModalOpen } =  context
+  function OpenModal() {
+    setModalOpen(true)
+  }
   return (
     <div className='TopBody_Body'>
         <div className="TopBody_Message">
@@ -17,7 +23,7 @@ const TopBody = () => {
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='lg' color='white' className='TopBody_Icon'/>
             </Button>
             </div>
-            <Button type='button' className='Desktop'>
+            <Button type='button' className='Desktop' onClick={OpenModal}>
                 GET STARTED
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='lg' color='white' className='TopBody_Icon'/>
             </Button>
