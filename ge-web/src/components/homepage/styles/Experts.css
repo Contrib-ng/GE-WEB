@@ -46,7 +46,7 @@
     display: flex;
 }
 
-.Experts_Body .Experts_Skill_Box .Box h1{
+.Experts_Body .Experts_Skill_Box .Box .Name_Icon h1{
     font-size: 12px;
     text-align:left;
     margin-top: -15%;
@@ -54,7 +54,7 @@
     margin-left: 10px;
 }
 
-.Experts_Body .Experts_Skill_Box .Box img {
+.Experts_Body .Experts_Skill_Box .Box .Name_Icon img {
     width: 30px;
     height: 30px;
     margin-top: 7%;
@@ -67,10 +67,11 @@
     width: 150px;
     object-fit: cover;
     border-radius: 50px;
-    margin-top: -2px;
+    margin: 10px;
 }
 
 .Experts_Body .Experts_Skill_Box .Box .Image:hover {
+    display: none;
     border-radius: 10px;
     height: 118px;
     width: 200px;
@@ -132,7 +133,7 @@
         margin: 5px;
         width: 170px;
     }
-    .Experts_Body .Experts_Skill_Box .Box h1{
+    .Experts_Body .Experts_Skill_Box .Box .Name_Icon h1{
         font-size: 10px;
         margin-top: -18%;
     }
@@ -144,11 +145,11 @@
         width: 150px;
         height: 90px;
     }
-    .Experts_Body .Experts_Skill_Box .Box h1{
+    .Experts_Body .Experts_Skill_Box .Box .Name_Icon h1{
         font-size: 8px;
         margin-top: -21%;
     }
-    .Experts_Body .Experts_Skill_Box .Box img {
+    .Experts_Body .Experts_Skill_Box .Box .Name_Icon img {
         width: 20px;
         height: 20px;
     }

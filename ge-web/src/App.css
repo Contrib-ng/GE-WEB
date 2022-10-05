@@ -1,6 +1,6 @@
 html{
     scroll-behavior: smooth;
-    animation: opacity 1s;
+    animation: opacity 2s;
 }
 
 .App {
@@ -12,9 +12,11 @@ html{
 @keyframes opacity {
     from {
         opacity: 0;
+        transform: scale3d(0,0,0);
     }
     to {
         opacity: 1;
+        transform: scale3d(100%,100%,100%);
     }
 }
 

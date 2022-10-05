@@ -113,7 +113,7 @@ Form .PrimaryHeader_Search_Logo{
     margin-left: -5%;
 }
 
-.Links {
+.Links{
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
@@ -122,7 +122,7 @@ Form .PrimaryHeader_Search_Logo{
     cursor: pointer;
 }
 
-.Links:active, .Links:hover {
+.Links:active, .Links:hover{
     color: #FB5012;
 }
 

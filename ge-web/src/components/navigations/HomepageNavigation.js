@@ -49,7 +49,7 @@ const HomepageNavigation = () => {
         </Button>
         </Form>
         <Nav style={{ maxHeight: '100px'}} className='PrimaryHeader_Links'>
-            <Nav.Link className='Links' href='/'>Skill</Nav.Link>
+            <Nav.Link className='Links'>Skills</Nav.Link>
             <Nav.Link className='Links'>Expert</Nav.Link>
             <Nav.Link className='Links'>Why us?</Nav.Link>
             <Nav.Link className='Links'>About us</Nav.Link>

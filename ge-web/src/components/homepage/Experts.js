@@ -19,11 +19,11 @@ const Experts = () => {
                 SKILLS.slice(0, more).map(skill => {
                     return (
                         <div className="Box" key={skill.name} >
-                            <div className="Name_Icon">
+                        <div className="Name_Icon">
                             <img src={skill.icon} alt="" />
                             <h1>{skill.name}</h1>
-                            </div>
-                            <img src={skill.backgroundImage} alt="" srcSet="" className='Image' />
+                        </div>
+                        <img src={skill.backgroundImage} alt="" srcSet="" className='Image' />
                         </div>
                     )
                 })
