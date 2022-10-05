@@ -75,7 +75,6 @@ export const ExpertSettings = () => {
     <div className="Body">
       <div className="Body_Components">
         <ExpertTopNavigation />
-        Hey
       </div>
     </div>
   )

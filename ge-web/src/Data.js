@@ -199,3 +199,38 @@ export const WHYGETEMPLOYEDMISSIONS = [
         message: 'We verify Freelancers, publish their feedback scores and All-Time Transaction Data to help you identify time-tested professionals across the globe.'
     },
 ]
+
+export const VACANTJOBS = [
+    {
+      jobName: 'Product Designer',
+      location: 'Lagos-Lekki',
+      jobType: 'remote',
+      jobDescription: "A job description is a useful, plain-language tool that explains the tasks, duties, function and responsibilities of a position. It details who performs a specific type of work, how that work is to be completed, and the frequency and the purpose of the work as it relates to the organization's mission and goals",
+      price: '360 000',
+      index: '0',
+    },
+    {
+      jobName: 'Software Development',
+      location: 'Lagos-Ajah',
+      jobType: 'part-time',
+      jobDescription: "A job description is a useful, plain-language tool that explains the tasks, duties, function and responsibilities of a position. It details who performs a specific type of work, how that work is to be completed, and the frequency and the purpose of the work as it relates to the organization's mission and goals",
+      price: '1 360 000',
+      index: '1',
+    },
+    {
+      jobName: 'Web Development',
+      location: 'Abuja',
+      jobType: '',
+      jobDescription: "A job description is a useful, plain-language tool that explains the tasks, duties, function and responsibilities of a position. It details who performs a specific type of work, how that work is to be completed, and the frequency and the purpose of the work as it relates to the organization's mission and goals",
+      price: '250 000',
+      index: '2',
+    },
+    {
+      jobName: 'Marketer',
+      location: 'Ogun',
+      jobType: '',
+      jobDescription: "Plain-language tool that explains the tasks, duties, function and responsibilities of a position. It details who performs a specific type of work, how that work is to be completed, and the frequency and the purpose of the work as it relates to the organization's mission and goals",
+      price: '150 000',
+      index: '3',
+    },
+]

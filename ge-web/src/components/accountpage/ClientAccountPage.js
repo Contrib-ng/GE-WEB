@@ -3,8 +3,8 @@ import './styles/ClientAccountPage.css'
 
 const ClientDashboard = () => {
   return (
-    <div className="ClientDashboard_Body">
-      <div className="ClientSideNavigation">
+    <div className="Body">
+      <div className="Body_Components">
     </div>
     </div>
   )

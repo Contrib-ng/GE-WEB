@@ -4,7 +4,8 @@ This product is built with [Create React App](https://github.com/facebook/create
 
 ## Available Scripts
 
-In the project directory, they are no scripts
+In the project directory, they are no scripts but to continue operation navigate to the ge-web folder,
+your terminal directory would look like [HOME_DIR]/GE-WEB/ge-web, in this directory you run [npm i] to install a node_module dependencies.
 
 ### Deployment
 

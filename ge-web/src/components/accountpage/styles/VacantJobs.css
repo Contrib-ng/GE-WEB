@@ -8,7 +8,6 @@
 .VacantJobs_Body .VacantJob_Card {
     border: 1px solid #ebecf0;
     width: fit-content;
-    height: fit-content;
     padding: 20px 10px ;
     border-radius: 10px;
     margin: 0 10px 10px 0;
@@ -65,6 +64,9 @@
         width: 350px;
         margin: 0 0 30px 0;
     }
+    .VacantJob_Card  .Price_Button h3{
+        font-size: 19px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -75,7 +77,6 @@
     .VacantJobs_Body .VacantJob_Card {
         margin: 0 0 20px 0;
         width: 230px;
-        height: 220px;
         padding: 15px;
     }
     .VacantJob_Card h1 {
@@ -84,6 +85,9 @@
     .VacantJob_Card h2 {
         font-size: 12px;
         font-weight: 400;
+    }
+    .VacantJob_Card  .Price_Button h3{
+        font-size: 18px;
     }
 }
 
@@ -94,18 +98,19 @@
     }
     .VacantJobs_Body .VacantJob_Card {
         width: 300px;
-        height: 150px;
         padding: 13px;
     }
     .VacantJob_Card h1 {
         font-size: 18px;
+    }
+    .VacantJob_Card  .Price_Button h3{
+        font-size: 17px;
     }
 }
 
 @media only screen and (max-width: 376px) {
     .VacantJobs_Body .VacantJob_Card {
         width: 240px;
-        height: 180px;
     }
     .VacantJob_Card h1 {
         font-size: 16px;
@@ -113,6 +118,9 @@
     .VacantJobs_Body {
         margin-top: 15px;
     }
+    .VacantJob_Card  .Price_Button h3{
+        font-size: 16px;
+    }    
 }
 
 
@@ -120,10 +128,12 @@
     .VacantJobs_Body .VacantJob_Card {
         width: 190px;
         margin: 0 2px 20px 1px !important;
-        height: 220px;
         padding: 11px;
     }
     .VacantJob_Card h1 {
         font-size: 16px;
+    }
+    .VacantJob_Card  .Price_Button h3{
+        font-size: 15px;
     }
 }
