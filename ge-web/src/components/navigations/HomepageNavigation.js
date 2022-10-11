@@ -38,7 +38,7 @@ const HomepageNavigation = () => {
   return (
     <Navbar>
         <Container style={{ display: 'flex', justifyContent: 'space-between', width: '100vw'}}>
-            <Navbar.Brand  className="Show_Mobile_Logo" style={{ display: 'flex', textDecoration: 'none', color: '#0057c2',}}>
+            <Navbar.Brand  className="Show_Mobile_Logo" style={{ display: 'flex', textDecoration: 'none', color: '#2e3092',}}>
             <Logo  classname="PrimaryHeader_Logo"/> {''} <h1>Get Employed</h1>
                 <HamburgerMenu />
             </Navbar.Brand>
